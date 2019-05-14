@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "G:/My Drive/ELEC/project/LabProject/ClockTest_isim_beh.exe" -prj "G:/My Drive/ELEC/project/LabProject/ClockTest_beh.prj" "work.ClockTest" 

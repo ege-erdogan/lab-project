@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
