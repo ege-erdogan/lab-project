@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "G:/My Drive/ELEC/project/LabProject/MorseDecoderTest_isim_beh.exe" -prj "G:/My Drive/ELEC/project/LabProject/MorseDecoderTest_beh.prj" "work.MorseDecoderTest" 
+-intstyle "ise" -incremental -o "G:/My Drive/ELEC/project/LabProject/CounterTest_isim_beh.exe" -prj "G:/My Drive/ELEC/project/LabProject/CounterTest_beh.prj" "work.CounterTest" 
