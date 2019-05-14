@@ -1,18 +1,18 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o G:/My Drive/ELEC/project/LabProject/ClockTest_isim_beh.exe -prj G:/My Drive/ELEC/project/LabProject/ClockTest_beh.prj work.ClockTest 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o G:/My Drive/ELEC/project/LabProject/MorseDecoderTest_isim_beh.exe -prj G:/My Drive/ELEC/project/LabProject/MorseDecoderTest_beh.prj work.MorseDecoderTest 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" into library work
-Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/ClockTest.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/MorseDecoderTest.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity ClockDivider [\ClockDivider(10)\]
-Compiling architecture behavior of entity clocktest
+Compiling architecture behavioral of entity MorseDecoder [morsedecoder_default]
+Compiling architecture behavior of entity morsedecodertest
 Time Resolution for simulation is 1ps.
 Compiled 5 VHDL Units
-Built simulation executable G:/My Drive/ELEC/project/LabProject/ClockTest_isim_beh.exe
-Fuse Memory Usage: 29260 KB
-Fuse CPU Usage: 327 ms
+Built simulation executable G:/My Drive/ELEC/project/LabProject/MorseDecoderTest_isim_beh.exe
+Fuse Memory Usage: 29360 KB
+Fuse CPU Usage: 328 ms

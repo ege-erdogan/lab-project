@@ -40,7 +40,9 @@ architecture Behavioral of MorseDecoder is
 
 begin
 
-	case bit5Rep is
+	process(bit5Rep)
+	begin
+		case bit5Rep is
 			when "00000" => 
 				bitRepOfMorse <= "00000000000000"; --space
 			when "00001" => 
@@ -83,7 +85,7 @@ begin
 				bitRepOfMorse <= "10101000000000"; --S
 			when "10100" => 
 				bitRepOfMorse <= "11100000000000"; --T
-			when "10001" => 
+			when "10101" => 
 				bitRepOfMorse <= "10101110000000"; --U
 			when "10110" => 
 				bitRepOfMorse <= "10101011100000"; --V
@@ -94,8 +96,11 @@ begin
 			when "11001" => 
 				bitRepOfMorse <= "11101011101110"; --Y
 			when "11010" => 
-				bitRepOfMorse <= "11101110101000"; --Z							
+				bitRepOfMorse <= "11101110101000"; --Z		
+			when others =>
+				bitRepOfMorse <= "11111111111111";
 		end case;
+	end process;
 
 end Behavioral;
 

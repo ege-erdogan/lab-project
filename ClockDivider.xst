@@ -1,0 +1,5 @@
+set -tmpdir "G:/My Drive/ELEC/project/LabProject/xst/projnav.tmp"
+set -xsthdpdir "G:/My Drive/ELEC/project/LabProject/xst"
+elaborate
+-ifn ClockDivider.prj
+-ifmt mixed

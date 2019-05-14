@@ -1,0 +1,10 @@
+Command line:
+   MorseDecoderTest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50370
+
+Tue May 14 13:04:46 2019
+
+
+ Elaboration Time: 0.078125 sec

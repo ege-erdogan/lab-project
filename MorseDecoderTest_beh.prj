@@ -1,0 +1,2 @@
+vhdl work "MorseDecoder.vhd"
+vhdl work "MorseDecoderTest.vhd"
