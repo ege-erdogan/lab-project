@@ -1,0 +1,2 @@
+vhdl isim_temp "ClockDivider.vhd"
+vhdl isim_temp "ClockTest.vhd"
