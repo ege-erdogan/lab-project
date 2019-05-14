@@ -1,21 +1,19 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o G:/My Drive/ELEC/project/LabProject/CounterTest_isim_beh.exe -prj G:/My Drive/ELEC/project/LabProject/CounterTest_beh.prj work.CounterTest 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o G:/My Drive/ELEC/project/LabProject/MemoryTest_isim_beh.exe -prj G:/My Drive/ELEC/project/LabProject/MemoryTest_beh.prj work.MemoryTest 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/Counter.vhd" into library work
-Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/CounterTest.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/Memory.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/MemoryTest.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
 Compiling package numeric_std
-Compiling architecture behavioral of entity Counter [counter_default]
-Compiling architecture behavior of entity countertest
+Compiling architecture behavioral of entity Memory [memory_default]
+Compiling architecture behavior of entity memorytest
 Time Resolution for simulation is 1ps.
-Compiled 8 VHDL Units
-Built simulation executable G:/My Drive/ELEC/project/LabProject/CounterTest_isim_beh.exe
-Fuse Memory Usage: 36876 KB
-Fuse CPU Usage: 593 ms
+Compiled 6 VHDL Units
+Built simulation executable G:/My Drive/ELEC/project/LabProject/MemoryTest_isim_beh.exe
+Fuse Memory Usage: 35444 KB
+Fuse CPU Usage: 578 ms

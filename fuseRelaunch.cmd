@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "G:/My Drive/ELEC/project/LabProject/CounterTest_isim_beh.exe" -prj "G:/My Drive/ELEC/project/LabProject/CounterTest_beh.prj" "work.CounterTest" 
+-intstyle "ise" -incremental -o "G:/My Drive/ELEC/project/LabProject/MemoryTest_isim_beh.exe" -prj "G:/My Drive/ELEC/project/LabProject/MemoryTest_beh.prj" "work.MemoryTest" 

@@ -1,0 +1,2 @@
+vhdl work "Memory.vhd"
+vhdl work "MemoryTest.vhd"

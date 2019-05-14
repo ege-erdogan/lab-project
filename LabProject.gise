@@ -28,9 +28,7 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ClockDivider.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ClockTest_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ClockTest_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CounterTest_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="CounterTest_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="CounterTest_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="LabProject.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="LabProject.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="LabProject.lso"/>
@@ -45,6 +43,9 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="LabProject_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="LabProject_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="LabProject_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MemoryTest_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MemoryTest_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="MemoryTest_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MorseDecoderTest_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
@@ -64,7 +65,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1557829416" xil_pn:in_ck="4247985431537332121" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1557829416">
+    <transform xil_pn:end_ts="1557831589" xil_pn:in_ck="-379819245442793278" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1557831589">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BuzzerInterface.vhd"/>
@@ -74,14 +75,15 @@
       <outfile xil_pn:name="CounterTest.vhd"/>
       <outfile xil_pn:name="LabProject.vhd"/>
       <outfile xil_pn:name="Memory.vhd"/>
+      <outfile xil_pn:name="MemoryTest.vhd"/>
       <outfile xil_pn:name="MorseDecoder.vhd"/>
       <outfile xil_pn:name="MorseDecoderTest.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1557829287" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7267641479990657706" xil_pn:start_ts="1557829287">
+    <transform xil_pn:end_ts="1557831357" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3714069332959716273" xil_pn:start_ts="1557831357">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1557829287" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6392290904667505630" xil_pn:start_ts="1557829287">
+    <transform xil_pn:end_ts="1557831357" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4200214763338278391" xil_pn:start_ts="1557831357">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -89,7 +91,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1557829416" xil_pn:in_ck="4247985431537332121" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1557829416">
+    <transform xil_pn:end_ts="1557831589" xil_pn:in_ck="-379819245442793278" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1557831589">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BuzzerInterface.vhd"/>
@@ -99,25 +101,26 @@
       <outfile xil_pn:name="CounterTest.vhd"/>
       <outfile xil_pn:name="LabProject.vhd"/>
       <outfile xil_pn:name="Memory.vhd"/>
+      <outfile xil_pn:name="MemoryTest.vhd"/>
       <outfile xil_pn:name="MorseDecoder.vhd"/>
       <outfile xil_pn:name="MorseDecoderTest.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1557829422" xil_pn:in_ck="4247985431537332121" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-653435823785607158" xil_pn:start_ts="1557829416">
+    <transform xil_pn:end_ts="1557831595" xil_pn:in_ck="-379819245442793278" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7128103259215214876" xil_pn:start_ts="1557831589">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CounterTest_beh.prj"/>
-      <outfile xil_pn:name="CounterTest_isim_beh.exe"/>
+      <outfile xil_pn:name="MemoryTest_beh.prj"/>
+      <outfile xil_pn:name="MemoryTest_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1557829423" xil_pn:in_ck="7151333205322123381" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3127976836994222473" xil_pn:start_ts="1557829422">
+    <transform xil_pn:end_ts="1557831596" xil_pn:in_ck="-5426755952796431331" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6249085184230380535" xil_pn:start_ts="1557831595">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CounterTest_isim_beh.wdb"/>
+      <outfile xil_pn:name="MemoryTest_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
