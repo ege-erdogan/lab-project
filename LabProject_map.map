@@ -9,7 +9,7 @@ Target Device  : xc3s50a
 Target Package : vq100
 Target Speed   : -5
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Wed May 15 21:05:41 2019
+Mapped Date    : Wed May 15 22:25:20 2019
 
 Mapping design into LUTs...
 Running directed packing...
@@ -216,17 +216,17 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   64
 Logic Utilization:
-  Total Number Slice Registers:         382 out of   1,408   27%
-    Number used as Flip Flops:           56
+  Total Number Slice Registers:         381 out of   1,408   27%
+    Number used as Flip Flops:           55
     Number used as Latches:             326
-  Number of 4 input LUTs:               628 out of   1,408   44%
+  Number of 4 input LUTs:               633 out of   1,408   44%
 Logic Distribution:
   Number of occupied Slices:            382 out of     704   54%
     Number of Slices containing only related logic:     382 out of     382 100%
     Number of Slices containing unrelated logic:          0 out of     382   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         677 out of   1,408   48%
-    Number used as logic:               628
+  Total Number of 4 input LUTs:         682 out of   1,408   48%
+    Number used as logic:               633
     Number used as a route-thru:         49
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -235,10 +235,10 @@ Logic Distribution:
   Number of bonded IOBs:                 15 out of      68   22%
   Number of BUFGMUXs:                     2 out of      24    8%
 
-Average Fanout of Non-Clock Nets:                3.35
+Average Fanout of Non-Clock Nets:                3.39
 
 Peak Memory Usage:  4442 MB
-Total REAL time to MAP completion:  3 secs 
+Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:

@@ -1,17 +1,17 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed May 15 21:05:44 2019
+// Written by: Map P.20131013 on Wed May 15 22:25:22 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "P40" LEVEL 1;
-COMP "save" LOCATE = SITE "P36" LEVEL 1;
+COMP "save" LOCATE = SITE "P37" LEVEL 1;
 COMP "char<0>" LOCATE = SITE "P15" LEVEL 1;
 COMP "char<1>" LOCATE = SITE "P12" LEVEL 1;
 COMP "char<2>" LOCATE = SITE "P5" LEVEL 1;
 COMP "char<3>" LOCATE = SITE "P4" LEVEL 1;
 COMP "char<4>" LOCATE = SITE "P94" LEVEL 1;
 COMP "p_out" LOCATE = SITE "P16" LEVEL 1;
-COMP "start_read" LOCATE = SITE "P34" LEVEL 1;
+COMP "start_read" LOCATE = SITE "P32" LEVEL 1;
 COMP "mem_out_add<0>" LOCATE = SITE "P93" LEVEL 1;
 COMP "mem_out_add<1>" LOCATE = SITE "P89" LEVEL 1;
 COMP "mem_out_add<2>" LOCATE = SITE "P86" LEVEL 1;

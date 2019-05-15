@@ -4,13 +4,12 @@ NET "char(2)" LOC = "P5";
 NET "char(1)" LOC = "P12";
 NET "char(0)" LOC = "P15";
 
-NET "save" LOC = "P36";
-NET "start_read" LOC = "P34";
+NET "save" LOC = "P37";
+NET "start_read" LOC = "P32";
 
 NET "clk" LOC = "P40";
 
-// NET "p_out" LOC = "P44";
-NET "p_out" LOC = "P16";
+NET "p_out" LOC = "P44";
 
 NET "mem_out_add(5)" LOC = "P77";
 NET "mem_out_add(4)" LOC = "P83";

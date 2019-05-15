@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: LabProject.prj
 
@@ -107,17 +107,14 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" in Library work.
 Architecture behavioral of Entity clockdivider is up to date.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/Counter.vhd" in Library work.
-Entity <counter> compiled.
-Entity <counter> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity counter is up to date.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/Memory.vhd" in Library work.
 Entity <memory> compiled.
 Entity <memory> (Architecture <behavioral>) compiled.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd" in Library work.
-Entity <morsedecoder> compiled.
-Entity <morsedecoder> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity morsedecoder is up to date.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd" in Library work.
-Entity <buzzerinterface> compiled.
-Entity <buzzerinterface> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity buzzerinterface is up to date.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" in Library work.
 Entity <labproject> compiled.
 Entity <labproject> (Architecture <behavioral>) compiled.
@@ -351,6 +348,7 @@ Optimizing unit <LabProject> ...
 Optimizing unit <BuzzerInterface> ...
 
 Optimizing unit <Memory> ...
+WARNING:Xst:1293 - FF/Latch <buzzer/reg_0> has a constant value of 0 in block <LabProject>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -362,8 +360,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 56
- Flip-Flops                                            : 56
+# Registers                                            : 55
+ Flip-Flops                                            : 55
 
 =========================================================================
 
@@ -392,23 +390,23 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 942
+# BELS                             : 951
 #      GND                         : 1
 #      INV                         : 7
 #      LUT1                        : 46
-#      LUT2                        : 2
-#      LUT3                        : 519
-#      LUT4                        : 104
+#      LUT2                        : 5
+#      LUT3                        : 522
+#      LUT4                        : 103
 #      MUXCY                       : 52
-#      MUXF5                       : 89
-#      MUXF6                       : 43
+#      MUXF5                       : 95
+#      MUXF6                       : 41
 #      MUXF7                       : 20
 #      MUXF8                       : 10
 #      VCC                         : 1
 #      XORCY                       : 48
-# FlipFlops/Latches                : 382
+# FlipFlops/Latches                : 381
 #      FDC                         : 12
-#      FDE                         : 19
+#      FDE                         : 18
 #      FDR                         : 24
 #      FDSE                        : 1
 #      LD                          : 5
@@ -428,9 +426,9 @@ Device utilization summary:
 
 Selected Device : 3s50avq100-5 
 
- Number of Slices:                      374  out of    704    53%  
- Number of Slice Flip Flops:            382  out of   1408    27%  
- Number of 4 input LUTs:                678  out of   1408    48%  
+ Number of Slices:                      375  out of    704    53%  
+ Number of Slice Flip Flops:            381  out of   1408    27%  
+ Number of 4 input LUTs:                683  out of   1408    48%  
  Number of IOs:                          15
  Number of bonded IOBs:                  15  out of     68    22%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -459,7 +457,7 @@ Clock Signal                                   | Clock buffer(FF name)         |
 save                                           | IBUF+BUFG                     | 7     |
 clk                                            | BUFGP                         | 25    |
 buzzer/ready                                   | NONE(read_address_counter/c_0)| 6     |
-DIV1/clk_div                                   | NONE(buzzer/last2)            | 19    |
+DIV1/clk_div                                   | NONE(buzzer/last2)            | 18    |
 reading                                        | NONE(mem/temp_out_4)          | 5     |
 mem/RAM_0_not0001(mem/RAM_0_not0001:O)         | NONE(*)(mem/RAM_0_4)          | 5     |
 mem/RAM_1_cmp_eq0000(mem/RAM_1_cmp_eq0000:O)   | NONE(*)(mem/RAM_1_4)          | 5     |
@@ -615,7 +613,7 @@ Delay:               2.938ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              6   0.495   0.677  write_address_counter/c_0 (write_address_counter/c_0)
-     LUT3:I0->O            2   0.561   0.446  write_address_counter/Mcount_c_xor<3>111 (N14)
+     LUT3:I0->O            2   0.561   0.446  write_address_counter/Mcount_c_xor<3>111 (N13)
      LUT4:I1->O            1   0.562   0.000  write_address_counter/Mcount_c_xor<5>11 (write_address_counter/Mcount_c5)
      FDC:D                     0.197          write_address_counter/c_5
     ----------------------------------------
@@ -638,7 +636,7 @@ Delay:               2.971ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              7   0.495   0.710  read_address_counter/c_0 (read_address_counter/c_0)
-     LUT3:I0->O            2   0.561   0.446  read_address_counter/Mcount_c_xor<3>111 (N15)
+     LUT3:I0->O            2   0.561   0.446  read_address_counter/Mcount_c_xor<3>111 (N14)
      LUT4:I1->O            1   0.562   0.000  read_address_counter/Mcount_c_xor<5>11 (read_address_counter/Mcount_c5)
      FDC:D                     0.197          read_address_counter/c_5
     ----------------------------------------
@@ -647,10 +645,10 @@ Delay:               2.971ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DIV1/clk_div'
-  Clock period: 3.001ns (frequency: 333.256MHz)
-  Total number of paths / destination ports: 105 / 38
+  Clock period: 2.986ns (frequency: 334.868MHz)
+  Total number of paths / destination ports: 101 / 36
 -------------------------------------------------------------------------
-Delay:               3.001ns (Levels of Logic = 1)
+Delay:               2.986ns (Levels of Logic = 1)
   Source:            buzzer/shift_ctrl (FF)
   Destination:       buzzer/reg_11 (FF)
   Source Clock:      DIV1/clk_div rising
@@ -661,11 +659,11 @@ Delay:               3.001ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDSE:C->Q            20   0.495   0.939  buzzer/shift_ctrl (buzzer/shift_ctrl)
-     LUT4:I3->O           14   0.561   0.850  buzzer/reg_1_not00011 (buzzer/reg_1_not0001)
+     LUT4:I3->O           13   0.561   0.836  buzzer/reg_1_not00011 (buzzer/reg_1_not0001)
      FDE:CE                    0.156          buzzer/reg_2
     ----------------------------------------
-    Total                      3.001ns (1.212ns logic, 1.789ns route)
-                                       (40.4% logic, 59.6% route)
+    Total                      2.986ns (1.212ns logic, 1.774ns route)
+                                       (40.6% logic, 59.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem/RAM_0_not0001'
@@ -3396,14 +3394,14 @@ Offset:              5.493ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.69 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.57 secs
  
 --> 
 
-Total memory usage is 4552836 kilobytes
+Total memory usage is 4552848 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   70 (   0 filtered)
+Number of warnings :   71 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

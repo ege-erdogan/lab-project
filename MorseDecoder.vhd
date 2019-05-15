@@ -92,7 +92,7 @@ begin
 			when "11010" => 
 				bitRepOfMorse <= "11101110101000"; --Z		
 			when others =>
-				bitRepOfMorse <= "11111111111111";
+				bitRepOfMorse <= "00000000000000";
 		end case;
 	end process;
 
