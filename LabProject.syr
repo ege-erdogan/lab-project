@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: LabProject.prj
 
@@ -107,13 +107,17 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" in Library work.
 Architecture behavioral of Entity clockdivider is up to date.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/Counter.vhd" in Library work.
-Architecture behavioral of Entity counter is up to date.
+Entity <counter> compiled.
+Entity <counter> (Architecture <behavioral>) compiled.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/Memory.vhd" in Library work.
-Architecture behavioral of Entity memory is up to date.
+Entity <memory> compiled.
+Entity <memory> (Architecture <behavioral>) compiled.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd" in Library work.
-Architecture behavioral of Entity morsedecoder is up to date.
+Entity <morsedecoder> compiled.
+Entity <morsedecoder> (Architecture <behavioral>) compiled.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd" in Library work.
-Architecture behavioral of Entity buzzerinterface is up to date.
+Entity <buzzerinterface> compiled.
+Entity <buzzerinterface> (Architecture <behavioral>) compiled.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" in Library work.
 Entity <labproject> compiled.
 Entity <labproject> (Architecture <behavioral>) compiled.
@@ -139,8 +143,8 @@ Analyzing hierarchy for entity <BuzzerInterface> in library <work> (architecture
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <LabProject> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" line 113: Unconnected output port 'reg_out' of component 'BuzzerInterface'.
-WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" line 125: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:753 - "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" line 126: Unconnected output port 'reg_out' of component 'BuzzerInterface'.
+WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" line 143: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <reading>
 Entity <LabProject> analyzed. Unit <LabProject> generated.
 
@@ -154,7 +158,7 @@ Analyzing Entity <Counter> in library <work> (Architecture <behavioral>).
 Entity <Counter> analyzed. Unit <Counter> generated.
 
 Analyzing Entity <Memory> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/Memory.vhd" line 51: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/Memory.vhd" line 45: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <RAM>, <data_in>
 Entity <Memory> analyzed. Unit <Memory> generated.
 
@@ -258,7 +262,7 @@ WARNING:Xst:737 - Found 5-bit latch for signal <RAM_60>. Latches may be generate
 WARNING:Xst:737 - Found 5-bit latch for signal <RAM_61>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 5-bit latch for signal <RAM_62>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 5-bit latch for signal <RAM_63>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 5-bit 64-to-1 multiplexer for signal <$varindex0000> created at line 54.
+    Found 5-bit 64-to-1 multiplexer for signal <$varindex0000> created at line 48.
     Summary:
 	inferred   5 Multiplexer(s).
 Unit <Memory> synthesized.
@@ -3392,12 +3396,12 @@ Offset:              5.493ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.05 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.69 secs
  
 --> 
 
-Total memory usage is 4552864 kilobytes
+Total memory usage is 4552836 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   70 (   0 filtered)

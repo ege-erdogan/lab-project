@@ -43,7 +43,7 @@ end LabProject;
 architecture Behavioral of LabProject is
 	
 	component ClockDivider is
-		Generic (N: INTEGER := 10 * 10**6); -- frequency
+		Generic (N: INTEGER := 10**7); -- frequency
 		Port (
 			clk_in: in std_logic;
 			clk_out: out std_logic
@@ -92,6 +92,7 @@ architecture Behavioral of LabProject is
 	
 	signal buzzer_rdy: std_logic;
 	
+	-- 1 if currently reading out the word
 	signal reading: std_logic;
 	
 	signal mem_out: std_logic_vector(4 downto 0);
@@ -100,19 +101,34 @@ architecture Behavioral of LabProject is
 	
 begin
 
-	DIV1: ClockDivider port map( clk_in => clk, clk_out => clk_div);
+	DIV1: ClockDivider port map( clk_in => clk, 
+										  clk_out => clk_div);
 	
-	write_address_counter: Counter port map( clk => save, reset => start_read, count => write_address);
+	-- two counters since write and read addresses
+	-- are controlled with different signals
+	write_address_counter: Counter port map( clk => save, 
+														  reset => start_read, 
+														  count => write_address);
 
-	read_address_counter: Counter port map( clk => buzzer_rdy, reset => start_read, count => read_address); 
+	read_address_counter: Counter port map( clk => buzzer_rdy, 
+														 reset => start_read, 
+														 count => read_address); 
 	
-	mem: Memory port map( data_in => char, read_enable => reading, write_enable => save, address => mem_address, data_out => mem_out);
+	mem: Memory port map( data_in => char, 
+								 read_enable => reading, 
+								 write_enable => save, 
+								 address => mem_address, 
+								 data_out => mem_out);
 	
-	decoder: MorseDecoder port map( bit5Rep => mem_out, bitRepOfMorse => morse);
+	decoder: MorseDecoder port map( bit5Rep => mem_out, 
+											  bitRepOfMorse => morse);
 	
-	buzzer: BuzzerInterface port map( data_in => morse, clk => clk_div, 
-												 data_out => p_out, ready => buzzer_rdy);
-	
+	buzzer: BuzzerInterface port map( data_in => morse, 
+												 clk => clk_div, 
+												 data_out => p_out, 
+												 ready => buzzer_rdy);
+							
+	-- control the activation of the reading process							
 	process(start_read, save)
 	begin
 		if start_read = '1' then
@@ -122,6 +138,8 @@ begin
 		end if;
 	end process;
 	
+	-- controls which memory address to use depending on
+	-- whether a reading process is taking place or not
 	process(write_address, read_address)
 	begin
 		if reading = '1' then
@@ -131,6 +149,7 @@ begin
 		end if;
 	end process;
 	
+	-- to display the read memory address with FPGA LEDs
 	mem_out_add <= read_address;
 
 end Behavioral;

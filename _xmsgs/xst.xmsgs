@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">G:/My Drive/ELEC/project/LabProject/LabProject.vhd</arg>&quot; line <arg fmt="%d" index="2">113</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reg_out</arg>&apos; of component &apos;<arg fmt="%s" index="4">BuzzerInterface</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">G:/My Drive/ELEC/project/LabProject/LabProject.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reg_out</arg>&apos; of component &apos;<arg fmt="%s" index="4">BuzzerInterface</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">G:/My Drive/ELEC/project/LabProject/LabProject.vhd</arg>&quot; line <arg fmt="%d" index="2">125</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">G:/My Drive/ELEC/project/LabProject/LabProject.vhd</arg>&quot; line <arg fmt="%d" index="2">143</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;reading&gt;</arg>
 </msg>
 
@@ -16,7 +16,7 @@
 <arg fmt="%s" index="3">&lt;clk_div&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">G:/My Drive/ELEC/project/LabProject/Memory.vhd</arg>&quot; line <arg fmt="%d" index="2">51</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">G:/My Drive/ELEC/project/LabProject/Memory.vhd</arg>&quot; line <arg fmt="%d" index="2">45</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;RAM&gt;, &lt;data_in&gt;</arg>
 </msg>
 

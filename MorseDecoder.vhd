@@ -20,15 +20,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- DEFINITION:
+-- Combinational logic decoder to convert the given 5-bit letters to their 14-bit Morse representations.
 entity MorseDecoder is
 	port (
 		bit5Rep: in STD_LOGIC_VECTOR(4 downto 0);
@@ -44,7 +38,7 @@ begin
 	begin
 		case bit5Rep is
 			when "00000" => 
-				bitRepOfMorse <= "00000000000000"; --space
+				bitRepOfMorse <= "00000000000000"; --SPACE
 			when "00001" => 
 				bitRepOfMorse <= "10111000000000"; --A
 			when "00010" => 

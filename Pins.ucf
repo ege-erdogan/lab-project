@@ -9,9 +9,8 @@ NET "start_read" LOC = "P34";
 
 NET "clk" LOC = "P40";
 
-NET "p_out" LOC = "P44";
-
-// NET "save" CLOCK_DEDICATED_ROUTE = FALSE; 
+// NET "p_out" LOC = "P44";
+NET "p_out" LOC = "P16";
 
 NET "mem_out_add(5)" LOC = "P77";
 NET "mem_out_add(4)" LOC = "P83";
