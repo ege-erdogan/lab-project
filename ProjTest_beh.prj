@@ -1,0 +1,7 @@
+vhdl work "MorseDecoder.vhd"
+vhdl work "Memory.vhd"
+vhdl work "Counter.vhd"
+vhdl work "ClockDivider.vhd"
+vhdl work "BuzzerInterface.vhd"
+vhdl work "LabProject.vhd"
+vhdl work "ProjTest.vhd"

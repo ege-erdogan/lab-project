@@ -44,7 +44,8 @@ ARCHITECTURE behavior OF BuzzerTest IS
          data_in : IN  std_logic_vector(13 downto 0);
          clk : IN  std_logic;
 			reg_out: out std_logic_vector(13 downto 0);
-         data_out : OUT  std_logic
+         data_out : OUT  std_logic;
+			ready: out std_logic
         );
     END COMPONENT;
     
@@ -56,6 +57,7 @@ ARCHITECTURE behavior OF BuzzerTest IS
  	--Outputs
    signal data_out : std_logic;
 	signal reg_out : std_logic_vector(13 downto 0);
+	signal ready: std_logic;
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -67,7 +69,8 @@ BEGIN
           data_in => data_in,
           clk => clk,
           data_out => data_out,
-			 reg_out => reg_out
+			 reg_out => reg_out,
+			 ready => ready
         );
 
    -- Clock process definitions
@@ -86,7 +89,7 @@ BEGIN
       -- hold reset state for 100 ns.
 		data_in <= "10101011100111";
       wait for clk_period*5;
-		data_in <= "00000000000000";
+		data_in <= "11101110111001";
 
       -- insert stimulus here 
 

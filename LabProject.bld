@@ -6,8 +6,6 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 LabProject.ngc LabProject.ngd
 
 Reading NGO file "G:/My Drive/ELEC/project/LabProject/LabProject.ngc" ...
-Loading design module "G:\My Drive\ELEC\project\LabProject/LabProject.ngc"...
-WARNING:NgdBuild:578 - Design contains no instances.
 Gathering constraint information from source properties...
 Done.
 
@@ -17,8 +15,6 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-ERROR:NgdBuild:605 - logical root block 'LabProject' with type 'LabProject' is
-   unexpanded. Symbol 'LabProject' is not supported in target 'spartan3a'.
 
 Partition Implementation Status
 -------------------------------
@@ -28,14 +24,13 @@ Partition Implementation Status
 -------------------------------
 
 NGDBUILD Design Results Summary:
-  Number of errors:     1
-  Number of warnings:   1
+  Number of errors:     0
+  Number of warnings:   0
 
-Total memory usage is 4420572 kilobytes
+Total memory usage is 4420660 kilobytes
 
-Total REAL time to NGDBUILD completion:  2 sec
+Writing NGD file "LabProject.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
 Total CPU time to NGDBUILD completion:   2 sec
-
-One or more errors were found during NGDBUILD.  No NGD file will be written.
 
 Writing NGDBUILD log file "LabProject.bld"...

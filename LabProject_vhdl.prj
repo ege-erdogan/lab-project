@@ -1,1 +1,6 @@
+vhdl work "G:\My Drive\ELEC\project\LabProject\MorseDecoder.vhd"
+vhdl work "G:\My Drive\ELEC\project\LabProject\Memory.vhd"
+vhdl work "G:\My Drive\ELEC\project\LabProject\Counter.vhd"
+vhdl work "G:\My Drive\ELEC\project\LabProject\ClockDivider.vhd"
+vhdl work "G:\My Drive\ELEC\project\LabProject\BuzzerInterface.vhd"
 vhdl work "G:\My Drive\ELEC\project\LabProject\LabProject.vhd"

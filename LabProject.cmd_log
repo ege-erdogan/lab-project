@@ -2,3 +2,52 @@ xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
 xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml LabProject.twx LabProject.ncd -o LabProject.twr LabProject.pcf -ucf Pins.ucf 
+bitgen -intstyle ise -f LabProject.ut LabProject.ncd 
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml LabProject.twx LabProject.ncd -o LabProject.twr LabProject.pcf -ucf Pins.ucf 
+bitgen -intstyle ise -f LabProject.ut LabProject.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml LabProject.twx LabProject.ncd -o LabProject.twr LabProject.pcf -ucf Pins.ucf 
+bitgen -intstyle ise -f LabProject.ut LabProject.ncd 
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml LabProject.twx LabProject.ncd -o LabProject.twr LabProject.pcf -ucf Pins.ucf 
+bitgen -intstyle ise -f LabProject.ut LabProject.ncd 
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml LabProject.twx LabProject.ncd -o LabProject.twr LabProject.pcf -ucf Pins.ucf 
+bitgen -intstyle ise -f LabProject.ut LabProject.ncd 
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml LabProject.twx LabProject.ncd -o LabProject.twr LabProject.pcf -ucf Pins.ucf 
+bitgen -intstyle ise -f LabProject.ut LabProject.ncd 
+xst -intstyle ise -ifn "G:/My Drive/ELEC/project/LabProject/LabProject.xst" -ofn "G:/My Drive/ELEC/project/LabProject/LabProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pins.ucf -p xc3s50a-vq100-5 "LabProject.ngc" LabProject.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o LabProject_map.ncd LabProject.ngd LabProject.pcf 
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd LabProject.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml LabProject.twx LabProject.ncd -o LabProject.twr LabProject.pcf -ucf Pins.ucf 
+bitgen -intstyle ise -f LabProject.ut LabProject.ncd 

@@ -104,18 +104,65 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" in Library work.
+Architecture behavioral of Entity clockdivider is up to date.
+Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/Counter.vhd" in Library work.
+Architecture behavioral of Entity counter is up to date.
+Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/Memory.vhd" in Library work.
+Architecture behavioral of Entity memory is up to date.
+Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd" in Library work.
+Architecture behavioral of Entity morsedecoder is up to date.
+Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd" in Library work.
+Architecture behavioral of Entity buzzerinterface is up to date.
 Compiling vhdl file "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" in Library work.
-Architecture behavioral of Entity labproject is up to date.
+Entity <labproject> compiled.
+Entity <labproject> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
+Analyzing hierarchy for entity <LabProject> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ClockDivider> in library <work> (architecture <behavioral>) with generics.
+	N = 5000000
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Memory> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MorseDecoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <BuzzerInterface> in library <work> (architecture <behavioral>).
+
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <LabProject> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" line 113: Unconnected output port 'reg_out' of component 'BuzzerInterface'.
+WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" line 125: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reading>
 Entity <LabProject> analyzed. Unit <LabProject> generated.
+
+Analyzing generic Entity <ClockDivider> in library <work> (Architecture <behavioral>).
+	N = 5000000
+WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <clk_div>
+Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
+
+Analyzing Entity <Counter> in library <work> (Architecture <behavioral>).
+Entity <Counter> analyzed. Unit <Counter> generated.
+
+Analyzing Entity <Memory> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/Memory.vhd" line 51: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <RAM>, <data_in>
+Entity <Memory> analyzed. Unit <Memory> generated.
+
+Analyzing Entity <MorseDecoder> in library <work> (Architecture <behavioral>).
+Entity <MorseDecoder> analyzed. Unit <MorseDecoder> generated.
+
+Analyzing Entity <BuzzerInterface> in library <work> (Architecture <behavioral>).
+Entity <BuzzerInterface> analyzed. Unit <BuzzerInterface> generated.
 
 
 =========================================================================
@@ -124,15 +171,144 @@ Entity <LabProject> analyzed. Unit <LabProject> generated.
 
 Performing bidirectional port resolution...
 
+Synthesizing Unit <ClockDivider>.
+    Related source file is "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd".
+    Found 1-bit register for signal <clk_div>.
+    Found 23-bit up counter for signal <counter>.
+    Found 23-bit adder for signal <counter$addsub0000> created at line 48.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ClockDivider> synthesized.
+
+
+Synthesizing Unit <Counter>.
+    Related source file is "G:/My Drive/ELEC/project/LabProject/Counter.vhd".
+    Found 6-bit up counter for signal <c>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter> synthesized.
+
+
+Synthesizing Unit <Memory>.
+    Related source file is "G:/My Drive/ELEC/project/LabProject/Memory.vhd".
+WARNING:Xst:737 - Found 5-bit latch for signal <temp_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_32>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_33>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_34>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_35>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_36>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_37>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_38>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_39>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_40>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_41>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_42>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_43>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_44>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_45>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_46>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_47>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_48>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_49>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_50>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_51>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_52>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_53>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_54>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_55>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_56>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_57>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_58>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_59>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_60>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_61>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_62>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <RAM_63>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 5-bit 64-to-1 multiplexer for signal <$varindex0000> created at line 54.
+    Summary:
+	inferred   5 Multiplexer(s).
+Unit <Memory> synthesized.
+
+
+Synthesizing Unit <MorseDecoder>.
+    Related source file is "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd".
+    Found 32x14-bit ROM for signal <bitRepOfMorse>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <MorseDecoder> synthesized.
+
+
+Synthesizing Unit <BuzzerInterface>.
+    Related source file is "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd".
+    Found 1-bit register for signal <ready>.
+    Found 1-bit register for signal <last>.
+    Found 1-bit register for signal <out_temp>.
+    Found 14-bit register for signal <reg>.
+    Found 1-bit register for signal <shift_ctrl>.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+Unit <BuzzerInterface> synthesized.
+
+
 Synthesizing Unit <LabProject>.
     Related source file is "G:/My Drive/ELEC/project/LabProject/LabProject.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <reading>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 Unit <LabProject> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# ROMs                                                 : 1
+ 32x14-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 23-bit adder                                          : 1
+# Counters                                             : 3
+ 23-bit up counter                                     : 1
+ 6-bit up counter                                      : 2
+# Registers                                            : 19
+ 1-bit register                                        : 19
+# Latches                                              : 66
+ 1-bit latch                                           : 1
+ 5-bit latch                                           : 65
+# Multiplexers                                         : 1
+ 5-bit 64-to-1 multiplexer                             : 1
+
 =========================================================================
 
 =========================================================================
@@ -143,7 +319,22 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# ROMs                                                 : 1
+ 32x14-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 23-bit adder                                          : 1
+# Counters                                             : 3
+ 23-bit up counter                                     : 1
+ 6-bit up counter                                      : 2
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Latches                                              : 66
+ 1-bit latch                                           : 1
+ 5-bit latch                                           : 65
+# Multiplexers                                         : 1
+ 5-bit 64-to-1 multiplexer                             : 1
+
 =========================================================================
 
 =========================================================================
@@ -152,16 +343,23 @@ Found no macro
 
 Optimizing unit <LabProject> ...
 
+Optimizing unit <BuzzerInterface> ...
+
+Optimizing unit <Memory> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LabProject, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block LabProject, actual ratio is 54.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 54
+ Flip-Flops                                            : 54
+
 =========================================================================
 
 =========================================================================
@@ -186,9 +384,38 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 0
+# IOs                              : 15
 
 Cell Usage :
+# BELS                             : 936
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 44
+#      LUT2                        : 4
+#      LUT3                        : 520
+#      LUT4                        : 101
+#      MUXCY                       : 50
+#      MUXF5                       : 89
+#      MUXF6                       : 43
+#      MUXF7                       : 20
+#      MUXF8                       : 10
+#      VCC                         : 1
+#      XORCY                       : 46
+# FlipFlops/Latches                : 380
+#      FDC                         : 12
+#      FDE                         : 18
+#      FDR                         : 23
+#      FDSE                        : 1
+#      LD                          : 5
+#      LDE                         : 315
+#      LDE_1                       : 5
+#      LDP                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 7
+#      OBUF                        : 7
 =========================================================================
 
 Device utilization summary:
@@ -196,9 +423,12 @@ Device utilization summary:
 
 Selected Device : 3s50avq100-5 
 
- Number of Slices:                        0  out of    704     0%  
- Number of IOs:                           0
- Number of bonded IOBs:                   0  out of     68     0%  
+ Number of Slices:                      374  out of    704    53%  
+ Number of Slice Flip Flops:            380  out of   1408    26%  
+ Number of 4 input LUTs:                676  out of   1408    48%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of     68    22%  
+ Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
 Partition Resource Summary:
@@ -218,19 +448,99 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------------------+-------------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)         | Load  |
+-----------------------------------------------+-------------------------------+-------+
+save                                           | IBUF+BUFG                     | 7     |
+clk                                            | BUFGP                         | 24    |
+buzzer/ready                                   | NONE(read_address_counter/c_0)| 6     |
+DIV1/clk_div                                   | NONE(buzzer/out_temp)         | 18    |
+reading                                        | NONE(mem/temp_out_4)          | 5     |
+mem/RAM_0_not0001(mem/RAM_0_not0001:O)         | NONE(*)(mem/RAM_0_4)          | 5     |
+mem/RAM_1_cmp_eq0000(mem/RAM_1_cmp_eq0000:O)   | NONE(*)(mem/RAM_1_4)          | 5     |
+mem/RAM_2_cmp_eq0000(mem/RAM_2_cmp_eq0000:O)   | NONE(*)(mem/RAM_2_4)          | 5     |
+mem/RAM_3_cmp_eq0000(mem/RAM_3_cmp_eq0000:O)   | NONE(*)(mem/RAM_3_4)          | 5     |
+mem/RAM_4_cmp_eq0000(mem/RAM_4_cmp_eq0000:O)   | NONE(*)(mem/RAM_4_4)          | 5     |
+mem/RAM_5_cmp_eq0000(mem/RAM_5_cmp_eq0000:O)   | NONE(*)(mem/RAM_5_4)          | 5     |
+mem/RAM_6_cmp_eq0000(mem/RAM_6_cmp_eq0000:O)   | NONE(*)(mem/RAM_6_4)          | 5     |
+mem/RAM_7_cmp_eq0000(mem/RAM_7_cmp_eq0000:O)   | NONE(*)(mem/RAM_7_4)          | 5     |
+mem/RAM_8_cmp_eq0000(mem/RAM_8_cmp_eq00001:O)  | NONE(*)(mem/RAM_8_4)          | 5     |
+mem/RAM_9_cmp_eq0000(mem/RAM_9_cmp_eq00001:O)  | NONE(*)(mem/RAM_9_4)          | 5     |
+mem/RAM_10_cmp_eq0000(mem/RAM_10_cmp_eq00001:O)| NONE(*)(mem/RAM_10_4)         | 5     |
+mem/RAM_11_cmp_eq0000(mem/RAM_11_cmp_eq00001:O)| NONE(*)(mem/RAM_11_4)         | 5     |
+mem/RAM_12_cmp_eq0000(mem/RAM_12_cmp_eq00001:O)| NONE(*)(mem/RAM_12_4)         | 5     |
+mem/RAM_13_cmp_eq0000(mem/RAM_13_cmp_eq00001:O)| NONE(*)(mem/RAM_13_4)         | 5     |
+mem/RAM_14_cmp_eq0000(mem/RAM_14_cmp_eq00001:O)| NONE(*)(mem/RAM_14_4)         | 5     |
+mem/RAM_15_cmp_eq0000(mem/RAM_15_cmp_eq00001:O)| NONE(*)(mem/RAM_15_4)         | 5     |
+mem/RAM_16_cmp_eq0000(mem/RAM_16_cmp_eq00001:O)| NONE(*)(mem/RAM_16_4)         | 5     |
+mem/RAM_17_cmp_eq0000(mem/RAM_17_cmp_eq00001:O)| NONE(*)(mem/RAM_17_4)         | 5     |
+mem/RAM_18_cmp_eq0000(mem/RAM_18_cmp_eq00001:O)| NONE(*)(mem/RAM_18_4)         | 5     |
+mem/RAM_19_cmp_eq0000(mem/RAM_19_cmp_eq00001:O)| NONE(*)(mem/RAM_19_4)         | 5     |
+mem/RAM_20_cmp_eq0000(mem/RAM_20_cmp_eq00001:O)| NONE(*)(mem/RAM_20_4)         | 5     |
+mem/RAM_21_cmp_eq0000(mem/RAM_21_cmp_eq00001:O)| NONE(*)(mem/RAM_21_4)         | 5     |
+mem/RAM_22_cmp_eq0000(mem/RAM_22_cmp_eq00001:O)| NONE(*)(mem/RAM_22_4)         | 5     |
+mem/RAM_23_cmp_eq0000(mem/RAM_23_cmp_eq00001:O)| NONE(*)(mem/RAM_23_4)         | 5     |
+mem/RAM_24_cmp_eq0000(mem/RAM_24_cmp_eq00001:O)| NONE(*)(mem/RAM_24_4)         | 5     |
+mem/RAM_25_cmp_eq0000(mem/RAM_25_cmp_eq00001:O)| NONE(*)(mem/RAM_25_4)         | 5     |
+mem/RAM_26_cmp_eq0000(mem/RAM_26_cmp_eq00001:O)| NONE(*)(mem/RAM_26_4)         | 5     |
+mem/RAM_27_cmp_eq0000(mem/RAM_27_cmp_eq00001:O)| NONE(*)(mem/RAM_27_4)         | 5     |
+mem/RAM_28_cmp_eq0000(mem/RAM_28_cmp_eq00001:O)| NONE(*)(mem/RAM_28_4)         | 5     |
+mem/RAM_29_cmp_eq0000(mem/RAM_29_cmp_eq00001:O)| NONE(*)(mem/RAM_29_4)         | 5     |
+mem/RAM_30_cmp_eq0000(mem/RAM_30_cmp_eq00001:O)| NONE(*)(mem/RAM_30_4)         | 5     |
+mem/RAM_31_cmp_eq0000(mem/RAM_31_cmp_eq00001:O)| NONE(*)(mem/RAM_31_4)         | 5     |
+mem/RAM_32_cmp_eq0000(mem/RAM_32_cmp_eq00001:O)| NONE(*)(mem/RAM_32_4)         | 5     |
+mem/RAM_33_cmp_eq0000(mem/RAM_33_cmp_eq00001:O)| NONE(*)(mem/RAM_33_4)         | 5     |
+mem/RAM_34_cmp_eq0000(mem/RAM_34_cmp_eq00001:O)| NONE(*)(mem/RAM_34_4)         | 5     |
+mem/RAM_35_cmp_eq0000(mem/RAM_35_cmp_eq00001:O)| NONE(*)(mem/RAM_35_4)         | 5     |
+mem/RAM_36_cmp_eq0000(mem/RAM_36_cmp_eq00001:O)| NONE(*)(mem/RAM_36_4)         | 5     |
+mem/RAM_37_cmp_eq0000(mem/RAM_37_cmp_eq00001:O)| NONE(*)(mem/RAM_37_4)         | 5     |
+mem/RAM_38_cmp_eq0000(mem/RAM_38_cmp_eq00001:O)| NONE(*)(mem/RAM_38_4)         | 5     |
+mem/RAM_39_cmp_eq0000(mem/RAM_39_cmp_eq00001:O)| NONE(*)(mem/RAM_39_4)         | 5     |
+mem/RAM_40_cmp_eq0000(mem/RAM_40_cmp_eq00001:O)| NONE(*)(mem/RAM_40_4)         | 5     |
+mem/RAM_41_cmp_eq0000(mem/RAM_41_cmp_eq00001:O)| NONE(*)(mem/RAM_41_4)         | 5     |
+mem/RAM_42_cmp_eq0000(mem/RAM_42_cmp_eq00001:O)| NONE(*)(mem/RAM_42_4)         | 5     |
+mem/RAM_43_cmp_eq0000(mem/RAM_43_cmp_eq00001:O)| NONE(*)(mem/RAM_43_4)         | 5     |
+mem/RAM_44_cmp_eq0000(mem/RAM_44_cmp_eq00001:O)| NONE(*)(mem/RAM_44_4)         | 5     |
+mem/RAM_45_cmp_eq0000(mem/RAM_45_cmp_eq00001:O)| NONE(*)(mem/RAM_45_4)         | 5     |
+mem/RAM_46_cmp_eq0000(mem/RAM_46_cmp_eq00001:O)| NONE(*)(mem/RAM_46_4)         | 5     |
+mem/RAM_47_cmp_eq0000(mem/RAM_47_cmp_eq00001:O)| NONE(*)(mem/RAM_47_4)         | 5     |
+mem/RAM_48_cmp_eq0000(mem/RAM_48_cmp_eq00001:O)| NONE(*)(mem/RAM_48_4)         | 5     |
+mem/RAM_49_cmp_eq0000(mem/RAM_49_cmp_eq00001:O)| NONE(*)(mem/RAM_49_4)         | 5     |
+mem/RAM_50_cmp_eq0000(mem/RAM_50_cmp_eq00001:O)| NONE(*)(mem/RAM_50_4)         | 5     |
+mem/RAM_51_cmp_eq0000(mem/RAM_51_cmp_eq00001:O)| NONE(*)(mem/RAM_51_4)         | 5     |
+mem/RAM_52_cmp_eq0000(mem/RAM_52_cmp_eq00001:O)| NONE(*)(mem/RAM_52_4)         | 5     |
+mem/RAM_53_cmp_eq0000(mem/RAM_53_cmp_eq00001:O)| NONE(*)(mem/RAM_53_4)         | 5     |
+mem/RAM_54_cmp_eq0000(mem/RAM_54_cmp_eq00001:O)| NONE(*)(mem/RAM_54_4)         | 5     |
+mem/RAM_55_cmp_eq0000(mem/RAM_55_cmp_eq00001:O)| NONE(*)(mem/RAM_55_4)         | 5     |
+mem/RAM_56_cmp_eq0000(mem/RAM_56_cmp_eq00001:O)| NONE(*)(mem/RAM_56_4)         | 5     |
+mem/RAM_57_cmp_eq0000(mem/RAM_57_cmp_eq00001:O)| NONE(*)(mem/RAM_57_4)         | 5     |
+mem/RAM_58_cmp_eq0000(mem/RAM_58_cmp_eq00001:O)| NONE(*)(mem/RAM_58_4)         | 5     |
+mem/RAM_59_cmp_eq0000(mem/RAM_59_cmp_eq00001:O)| NONE(*)(mem/RAM_59_4)         | 5     |
+mem/RAM_60_cmp_eq0000(mem/RAM_60_cmp_eq00001:O)| NONE(*)(mem/RAM_60_4)         | 5     |
+mem/RAM_61_cmp_eq0000(mem/RAM_61_cmp_eq00001:O)| NONE(*)(mem/RAM_61_4)         | 5     |
+mem/RAM_62_cmp_eq0000(mem/RAM_62_cmp_eq00001:O)| NONE(*)(mem/RAM_62_4)         | 5     |
+mem/RAM_63_cmp_eq0000(mem/RAM_63_cmp_eq00001:O)| NONE(*)(mem/RAM_63_4)         | 5     |
+-----------------------------------------------+-------------------------------+-------+
+(*) These 64 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+start_read                         | IBUF                   | 13    |
+-----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum period: 6.984ns (Maximum Frequency: 143.181MHz)
+   Minimum input arrival time before clock: 2.840ns
+   Maximum output required time after clock: 5.493ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -238,16 +548,2856 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.984ns (frequency: 143.181MHz)
+  Total number of paths / destination ports: 6901 / 48
+-------------------------------------------------------------------------
+Delay:               6.984ns (Levels of Logic = 25)
+  Source:            DIV1/counter_1 (FF)
+  Destination:       DIV1/counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: DIV1/counter_1 to DIV1/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.488  DIV1/counter_1 (DIV1/counter_1)
+     LUT1:I0->O            1   0.561   0.000  DIV1/Madd_counter_addsub0000_cy<1>_rt (DIV1/Madd_counter_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.523   0.000  DIV1/Madd_counter_addsub0000_cy<1> (DIV1/Madd_counter_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<2> (DIV1/Madd_counter_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<3> (DIV1/Madd_counter_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<4> (DIV1/Madd_counter_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<5> (DIV1/Madd_counter_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<6> (DIV1/Madd_counter_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<7> (DIV1/Madd_counter_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<8> (DIV1/Madd_counter_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<9> (DIV1/Madd_counter_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<10> (DIV1/Madd_counter_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<11> (DIV1/Madd_counter_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<12> (DIV1/Madd_counter_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<13> (DIV1/Madd_counter_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<14> (DIV1/Madd_counter_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<15> (DIV1/Madd_counter_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<16> (DIV1/Madd_counter_addsub0000_cy<16>)
+     XORCY:CI->O           1   0.654   0.380  DIV1/Madd_counter_addsub0000_xor<17> (DIV1/counter_addsub0000<17>)
+     LUT3:I2->O            1   0.561   0.000  DIV1/counter_cmp_eq0000_wg_lut<0> (DIV1/counter_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  DIV1/counter_cmp_eq0000_wg_cy<0> (DIV1/counter_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<1> (DIV1/counter_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<2> (DIV1/counter_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<3> (DIV1/counter_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<4> (DIV1/counter_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          24   0.065   1.064  DIV1/counter_cmp_eq0000_wg_cy<5> (DIV1/counter_cmp_eq0000)
+     FDR:R                     0.435          DIV1/counter_0
+    ----------------------------------------
+    Total                      6.984ns (5.052ns logic, 1.932ns route)
+                                       (72.3% logic, 27.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'save'
+  Clock period: 2.938ns (frequency: 340.414MHz)
+  Total number of paths / destination ports: 21 / 6
+-------------------------------------------------------------------------
+Delay:               2.938ns (Levels of Logic = 2)
+  Source:            write_address_counter/c_0 (FF)
+  Destination:       write_address_counter/c_5 (FF)
+  Source Clock:      save rising
+  Destination Clock: save rising
+
+  Data Path: write_address_counter/c_0 to write_address_counter/c_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.495   0.677  write_address_counter/c_0 (write_address_counter/c_0)
+     LUT3:I0->O            2   0.561   0.446  write_address_counter/Mcount_c311 (write_address_counter/Mcount_c3_bdd0)
+     LUT4:I1->O            1   0.562   0.000  write_address_counter/Mcount_c51 (write_address_counter/Mcount_c5)
+     FDC:D                     0.197          write_address_counter/c_5
+    ----------------------------------------
+    Total                      2.938ns (1.815ns logic, 1.123ns route)
+                                       (61.8% logic, 38.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'buzzer/ready'
+  Clock period: 2.971ns (frequency: 336.615MHz)
+  Total number of paths / destination ports: 21 / 6
+-------------------------------------------------------------------------
+Delay:               2.971ns (Levels of Logic = 2)
+  Source:            read_address_counter/c_0 (FF)
+  Destination:       read_address_counter/c_5 (FF)
+  Source Clock:      buzzer/ready rising
+  Destination Clock: buzzer/ready rising
+
+  Data Path: read_address_counter/c_0 to read_address_counter/c_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.495   0.710  read_address_counter/c_0 (read_address_counter/c_0)
+     LUT3:I0->O            2   0.561   0.446  read_address_counter/Mcount_c311 (read_address_counter/Mcount_c3_bdd0)
+     LUT4:I1->O            1   0.562   0.000  read_address_counter/Mcount_c51 (read_address_counter/Mcount_c5)
+     FDC:D                     0.197          read_address_counter/c_5
+    ----------------------------------------
+    Total                      2.971ns (1.815ns logic, 1.156ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DIV1/clk_div'
+  Clock period: 3.022ns (frequency: 330.940MHz)
+  Total number of paths / destination ports: 83 / 36
+-------------------------------------------------------------------------
+Delay:               3.022ns (Levels of Logic = 1)
+  Source:            buzzer/shift_ctrl (FF)
+  Destination:       buzzer/reg_11 (FF)
+  Source Clock:      DIV1/clk_div rising
+  Destination Clock: DIV1/clk_div rising
+
+  Data Path: buzzer/shift_ctrl to buzzer/reg_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            20   0.495   0.960  buzzer/shift_ctrl (buzzer/shift_ctrl)
+     LUT3:I2->O           14   0.561   0.850  buzzer/reg_1_not00011 (buzzer/reg_1_not0001)
+     FDE:CE                    0.156          buzzer/reg_2
+    ----------------------------------------
+    Total                      3.022ns (1.212ns logic, 1.810ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_0_not0001'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_0_4 (LATCH)
+  Destination:       mem/RAM_0_4 (LATCH)
+  Source Clock:      mem/RAM_0_not0001 rising
+  Destination Clock: mem/RAM_0_not0001 rising
+
+  Data Path: mem/RAM_0_4 to mem/RAM_0_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            2   0.629   0.446  mem/RAM_0_4 (mem/RAM_0_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_0_mux0000<4>1 (mem/RAM_0_mux0000<4>)
+     LDE_1:D                   0.197          mem/RAM_0_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_1_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_1_4 (LATCH)
+  Destination:       mem/RAM_1_4 (LATCH)
+  Source Clock:      mem/RAM_1_cmp_eq0000 falling
+  Destination Clock: mem/RAM_1_cmp_eq0000 falling
+
+  Data Path: mem/RAM_1_4 to mem/RAM_1_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_1_4 (mem/RAM_1_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_1_mux0000<4>1 (mem/RAM_1_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_1_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_2_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_2_4 (LATCH)
+  Destination:       mem/RAM_2_4 (LATCH)
+  Source Clock:      mem/RAM_2_cmp_eq0000 falling
+  Destination Clock: mem/RAM_2_cmp_eq0000 falling
+
+  Data Path: mem/RAM_2_4 to mem/RAM_2_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_2_4 (mem/RAM_2_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_2_mux0000<4>1 (mem/RAM_2_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_2_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_3_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_3_4 (LATCH)
+  Destination:       mem/RAM_3_4 (LATCH)
+  Source Clock:      mem/RAM_3_cmp_eq0000 falling
+  Destination Clock: mem/RAM_3_cmp_eq0000 falling
+
+  Data Path: mem/RAM_3_4 to mem/RAM_3_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_3_4 (mem/RAM_3_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_3_mux0000<4>1 (mem/RAM_3_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_3_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_4_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_4_4 (LATCH)
+  Destination:       mem/RAM_4_4 (LATCH)
+  Source Clock:      mem/RAM_4_cmp_eq0000 falling
+  Destination Clock: mem/RAM_4_cmp_eq0000 falling
+
+  Data Path: mem/RAM_4_4 to mem/RAM_4_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_4_4 (mem/RAM_4_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_4_mux0000<4>1 (mem/RAM_4_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_4_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_5_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_5_4 (LATCH)
+  Destination:       mem/RAM_5_4 (LATCH)
+  Source Clock:      mem/RAM_5_cmp_eq0000 falling
+  Destination Clock: mem/RAM_5_cmp_eq0000 falling
+
+  Data Path: mem/RAM_5_4 to mem/RAM_5_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_5_4 (mem/RAM_5_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_5_mux0000<4>1 (mem/RAM_5_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_5_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_6_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_6_4 (LATCH)
+  Destination:       mem/RAM_6_4 (LATCH)
+  Source Clock:      mem/RAM_6_cmp_eq0000 falling
+  Destination Clock: mem/RAM_6_cmp_eq0000 falling
+
+  Data Path: mem/RAM_6_4 to mem/RAM_6_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_6_4 (mem/RAM_6_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_6_mux0000<4>1 (mem/RAM_6_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_6_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_7_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_7_4 (LATCH)
+  Destination:       mem/RAM_7_4 (LATCH)
+  Source Clock:      mem/RAM_7_cmp_eq0000 falling
+  Destination Clock: mem/RAM_7_cmp_eq0000 falling
+
+  Data Path: mem/RAM_7_4 to mem/RAM_7_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_7_4 (mem/RAM_7_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_7_mux0000<4>1 (mem/RAM_7_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_7_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_8_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_8_4 (LATCH)
+  Destination:       mem/RAM_8_4 (LATCH)
+  Source Clock:      mem/RAM_8_cmp_eq0000 falling
+  Destination Clock: mem/RAM_8_cmp_eq0000 falling
+
+  Data Path: mem/RAM_8_4 to mem/RAM_8_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_8_4 (mem/RAM_8_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_8_mux0000<4>1 (mem/RAM_8_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_8_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_9_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_9_4 (LATCH)
+  Destination:       mem/RAM_9_4 (LATCH)
+  Source Clock:      mem/RAM_9_cmp_eq0000 falling
+  Destination Clock: mem/RAM_9_cmp_eq0000 falling
+
+  Data Path: mem/RAM_9_4 to mem/RAM_9_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_9_4 (mem/RAM_9_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_9_mux0000<4>1 (mem/RAM_9_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_9_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_10_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_10_4 (LATCH)
+  Destination:       mem/RAM_10_4 (LATCH)
+  Source Clock:      mem/RAM_10_cmp_eq0000 falling
+  Destination Clock: mem/RAM_10_cmp_eq0000 falling
+
+  Data Path: mem/RAM_10_4 to mem/RAM_10_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_10_4 (mem/RAM_10_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_10_mux0000<4>1 (mem/RAM_10_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_10_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_11_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_11_4 (LATCH)
+  Destination:       mem/RAM_11_4 (LATCH)
+  Source Clock:      mem/RAM_11_cmp_eq0000 falling
+  Destination Clock: mem/RAM_11_cmp_eq0000 falling
+
+  Data Path: mem/RAM_11_4 to mem/RAM_11_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_11_4 (mem/RAM_11_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_11_mux0000<4>1 (mem/RAM_11_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_11_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_12_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_12_4 (LATCH)
+  Destination:       mem/RAM_12_4 (LATCH)
+  Source Clock:      mem/RAM_12_cmp_eq0000 falling
+  Destination Clock: mem/RAM_12_cmp_eq0000 falling
+
+  Data Path: mem/RAM_12_4 to mem/RAM_12_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_12_4 (mem/RAM_12_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_12_mux0000<4>1 (mem/RAM_12_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_12_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_13_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_13_4 (LATCH)
+  Destination:       mem/RAM_13_4 (LATCH)
+  Source Clock:      mem/RAM_13_cmp_eq0000 falling
+  Destination Clock: mem/RAM_13_cmp_eq0000 falling
+
+  Data Path: mem/RAM_13_4 to mem/RAM_13_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_13_4 (mem/RAM_13_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_13_mux0000<4>1 (mem/RAM_13_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_13_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_14_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_14_4 (LATCH)
+  Destination:       mem/RAM_14_4 (LATCH)
+  Source Clock:      mem/RAM_14_cmp_eq0000 falling
+  Destination Clock: mem/RAM_14_cmp_eq0000 falling
+
+  Data Path: mem/RAM_14_4 to mem/RAM_14_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_14_4 (mem/RAM_14_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_14_mux0000<4>1 (mem/RAM_14_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_14_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_15_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_15_4 (LATCH)
+  Destination:       mem/RAM_15_4 (LATCH)
+  Source Clock:      mem/RAM_15_cmp_eq0000 falling
+  Destination Clock: mem/RAM_15_cmp_eq0000 falling
+
+  Data Path: mem/RAM_15_4 to mem/RAM_15_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_15_4 (mem/RAM_15_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_15_mux0000<4>1 (mem/RAM_15_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_15_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_16_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_16_4 (LATCH)
+  Destination:       mem/RAM_16_4 (LATCH)
+  Source Clock:      mem/RAM_16_cmp_eq0000 falling
+  Destination Clock: mem/RAM_16_cmp_eq0000 falling
+
+  Data Path: mem/RAM_16_4 to mem/RAM_16_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_16_4 (mem/RAM_16_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_16_mux0000<4>1 (mem/RAM_16_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_16_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_17_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_17_4 (LATCH)
+  Destination:       mem/RAM_17_4 (LATCH)
+  Source Clock:      mem/RAM_17_cmp_eq0000 falling
+  Destination Clock: mem/RAM_17_cmp_eq0000 falling
+
+  Data Path: mem/RAM_17_4 to mem/RAM_17_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_17_4 (mem/RAM_17_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_17_mux0000<4>1 (mem/RAM_17_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_17_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_18_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_18_4 (LATCH)
+  Destination:       mem/RAM_18_4 (LATCH)
+  Source Clock:      mem/RAM_18_cmp_eq0000 falling
+  Destination Clock: mem/RAM_18_cmp_eq0000 falling
+
+  Data Path: mem/RAM_18_4 to mem/RAM_18_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_18_4 (mem/RAM_18_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_18_mux0000<4>1 (mem/RAM_18_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_18_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_19_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_19_4 (LATCH)
+  Destination:       mem/RAM_19_4 (LATCH)
+  Source Clock:      mem/RAM_19_cmp_eq0000 falling
+  Destination Clock: mem/RAM_19_cmp_eq0000 falling
+
+  Data Path: mem/RAM_19_4 to mem/RAM_19_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_19_4 (mem/RAM_19_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_19_mux0000<4>1 (mem/RAM_19_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_19_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_20_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_20_4 (LATCH)
+  Destination:       mem/RAM_20_4 (LATCH)
+  Source Clock:      mem/RAM_20_cmp_eq0000 falling
+  Destination Clock: mem/RAM_20_cmp_eq0000 falling
+
+  Data Path: mem/RAM_20_4 to mem/RAM_20_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_20_4 (mem/RAM_20_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_20_mux0000<4>1 (mem/RAM_20_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_20_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_21_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_21_4 (LATCH)
+  Destination:       mem/RAM_21_4 (LATCH)
+  Source Clock:      mem/RAM_21_cmp_eq0000 falling
+  Destination Clock: mem/RAM_21_cmp_eq0000 falling
+
+  Data Path: mem/RAM_21_4 to mem/RAM_21_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_21_4 (mem/RAM_21_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_21_mux0000<4>1 (mem/RAM_21_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_21_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_22_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_22_4 (LATCH)
+  Destination:       mem/RAM_22_4 (LATCH)
+  Source Clock:      mem/RAM_22_cmp_eq0000 falling
+  Destination Clock: mem/RAM_22_cmp_eq0000 falling
+
+  Data Path: mem/RAM_22_4 to mem/RAM_22_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_22_4 (mem/RAM_22_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_22_mux0000<4>1 (mem/RAM_22_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_22_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_23_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_23_4 (LATCH)
+  Destination:       mem/RAM_23_4 (LATCH)
+  Source Clock:      mem/RAM_23_cmp_eq0000 falling
+  Destination Clock: mem/RAM_23_cmp_eq0000 falling
+
+  Data Path: mem/RAM_23_4 to mem/RAM_23_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_23_4 (mem/RAM_23_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_23_mux0000<4>1 (mem/RAM_23_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_23_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_24_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_24_4 (LATCH)
+  Destination:       mem/RAM_24_4 (LATCH)
+  Source Clock:      mem/RAM_24_cmp_eq0000 falling
+  Destination Clock: mem/RAM_24_cmp_eq0000 falling
+
+  Data Path: mem/RAM_24_4 to mem/RAM_24_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_24_4 (mem/RAM_24_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_24_mux0000<4>1 (mem/RAM_24_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_24_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_25_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_25_4 (LATCH)
+  Destination:       mem/RAM_25_4 (LATCH)
+  Source Clock:      mem/RAM_25_cmp_eq0000 falling
+  Destination Clock: mem/RAM_25_cmp_eq0000 falling
+
+  Data Path: mem/RAM_25_4 to mem/RAM_25_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_25_4 (mem/RAM_25_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_25_mux0000<4>1 (mem/RAM_25_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_25_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_26_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_26_4 (LATCH)
+  Destination:       mem/RAM_26_4 (LATCH)
+  Source Clock:      mem/RAM_26_cmp_eq0000 falling
+  Destination Clock: mem/RAM_26_cmp_eq0000 falling
+
+  Data Path: mem/RAM_26_4 to mem/RAM_26_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_26_4 (mem/RAM_26_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_26_mux0000<4>1 (mem/RAM_26_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_26_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_27_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_27_4 (LATCH)
+  Destination:       mem/RAM_27_4 (LATCH)
+  Source Clock:      mem/RAM_27_cmp_eq0000 falling
+  Destination Clock: mem/RAM_27_cmp_eq0000 falling
+
+  Data Path: mem/RAM_27_4 to mem/RAM_27_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_27_4 (mem/RAM_27_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_27_mux0000<4>1 (mem/RAM_27_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_27_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_28_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_28_4 (LATCH)
+  Destination:       mem/RAM_28_4 (LATCH)
+  Source Clock:      mem/RAM_28_cmp_eq0000 falling
+  Destination Clock: mem/RAM_28_cmp_eq0000 falling
+
+  Data Path: mem/RAM_28_4 to mem/RAM_28_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_28_4 (mem/RAM_28_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_28_mux0000<4>1 (mem/RAM_28_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_28_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_29_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_29_4 (LATCH)
+  Destination:       mem/RAM_29_4 (LATCH)
+  Source Clock:      mem/RAM_29_cmp_eq0000 falling
+  Destination Clock: mem/RAM_29_cmp_eq0000 falling
+
+  Data Path: mem/RAM_29_4 to mem/RAM_29_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_29_4 (mem/RAM_29_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_29_mux0000<4>1 (mem/RAM_29_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_29_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_30_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_30_4 (LATCH)
+  Destination:       mem/RAM_30_4 (LATCH)
+  Source Clock:      mem/RAM_30_cmp_eq0000 falling
+  Destination Clock: mem/RAM_30_cmp_eq0000 falling
+
+  Data Path: mem/RAM_30_4 to mem/RAM_30_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_30_4 (mem/RAM_30_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_30_mux0000<4>1 (mem/RAM_30_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_30_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_31_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_31_4 (LATCH)
+  Destination:       mem/RAM_31_4 (LATCH)
+  Source Clock:      mem/RAM_31_cmp_eq0000 falling
+  Destination Clock: mem/RAM_31_cmp_eq0000 falling
+
+  Data Path: mem/RAM_31_4 to mem/RAM_31_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_31_4 (mem/RAM_31_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_31_mux0000<4>1 (mem/RAM_31_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_31_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_32_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_32_4 (LATCH)
+  Destination:       mem/RAM_32_4 (LATCH)
+  Source Clock:      mem/RAM_32_cmp_eq0000 falling
+  Destination Clock: mem/RAM_32_cmp_eq0000 falling
+
+  Data Path: mem/RAM_32_4 to mem/RAM_32_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_32_4 (mem/RAM_32_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_32_mux0000<4>1 (mem/RAM_32_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_32_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_33_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_33_4 (LATCH)
+  Destination:       mem/RAM_33_4 (LATCH)
+  Source Clock:      mem/RAM_33_cmp_eq0000 falling
+  Destination Clock: mem/RAM_33_cmp_eq0000 falling
+
+  Data Path: mem/RAM_33_4 to mem/RAM_33_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_33_4 (mem/RAM_33_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_33_mux0000<4>1 (mem/RAM_33_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_33_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_34_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_34_4 (LATCH)
+  Destination:       mem/RAM_34_4 (LATCH)
+  Source Clock:      mem/RAM_34_cmp_eq0000 falling
+  Destination Clock: mem/RAM_34_cmp_eq0000 falling
+
+  Data Path: mem/RAM_34_4 to mem/RAM_34_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_34_4 (mem/RAM_34_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_34_mux0000<4>1 (mem/RAM_34_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_34_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_35_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_35_4 (LATCH)
+  Destination:       mem/RAM_35_4 (LATCH)
+  Source Clock:      mem/RAM_35_cmp_eq0000 falling
+  Destination Clock: mem/RAM_35_cmp_eq0000 falling
+
+  Data Path: mem/RAM_35_4 to mem/RAM_35_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_35_4 (mem/RAM_35_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_35_mux0000<4>1 (mem/RAM_35_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_35_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_36_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_36_4 (LATCH)
+  Destination:       mem/RAM_36_4 (LATCH)
+  Source Clock:      mem/RAM_36_cmp_eq0000 falling
+  Destination Clock: mem/RAM_36_cmp_eq0000 falling
+
+  Data Path: mem/RAM_36_4 to mem/RAM_36_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_36_4 (mem/RAM_36_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_36_mux0000<4>1 (mem/RAM_36_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_36_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_37_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_37_4 (LATCH)
+  Destination:       mem/RAM_37_4 (LATCH)
+  Source Clock:      mem/RAM_37_cmp_eq0000 falling
+  Destination Clock: mem/RAM_37_cmp_eq0000 falling
+
+  Data Path: mem/RAM_37_4 to mem/RAM_37_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_37_4 (mem/RAM_37_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_37_mux0000<4>1 (mem/RAM_37_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_37_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_38_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_38_4 (LATCH)
+  Destination:       mem/RAM_38_4 (LATCH)
+  Source Clock:      mem/RAM_38_cmp_eq0000 falling
+  Destination Clock: mem/RAM_38_cmp_eq0000 falling
+
+  Data Path: mem/RAM_38_4 to mem/RAM_38_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_38_4 (mem/RAM_38_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_38_mux0000<4>1 (mem/RAM_38_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_38_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_39_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_39_4 (LATCH)
+  Destination:       mem/RAM_39_4 (LATCH)
+  Source Clock:      mem/RAM_39_cmp_eq0000 falling
+  Destination Clock: mem/RAM_39_cmp_eq0000 falling
+
+  Data Path: mem/RAM_39_4 to mem/RAM_39_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_39_4 (mem/RAM_39_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_39_mux0000<4>1 (mem/RAM_39_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_39_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_40_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_40_4 (LATCH)
+  Destination:       mem/RAM_40_4 (LATCH)
+  Source Clock:      mem/RAM_40_cmp_eq0000 falling
+  Destination Clock: mem/RAM_40_cmp_eq0000 falling
+
+  Data Path: mem/RAM_40_4 to mem/RAM_40_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_40_4 (mem/RAM_40_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_40_mux0000<4>1 (mem/RAM_40_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_40_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_41_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_41_4 (LATCH)
+  Destination:       mem/RAM_41_4 (LATCH)
+  Source Clock:      mem/RAM_41_cmp_eq0000 falling
+  Destination Clock: mem/RAM_41_cmp_eq0000 falling
+
+  Data Path: mem/RAM_41_4 to mem/RAM_41_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_41_4 (mem/RAM_41_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_41_mux0000<4>1 (mem/RAM_41_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_41_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_42_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_42_4 (LATCH)
+  Destination:       mem/RAM_42_4 (LATCH)
+  Source Clock:      mem/RAM_42_cmp_eq0000 falling
+  Destination Clock: mem/RAM_42_cmp_eq0000 falling
+
+  Data Path: mem/RAM_42_4 to mem/RAM_42_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_42_4 (mem/RAM_42_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_42_mux0000<4>1 (mem/RAM_42_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_42_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_43_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_43_4 (LATCH)
+  Destination:       mem/RAM_43_4 (LATCH)
+  Source Clock:      mem/RAM_43_cmp_eq0000 falling
+  Destination Clock: mem/RAM_43_cmp_eq0000 falling
+
+  Data Path: mem/RAM_43_4 to mem/RAM_43_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_43_4 (mem/RAM_43_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_43_mux0000<4>1 (mem/RAM_43_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_43_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_44_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_44_4 (LATCH)
+  Destination:       mem/RAM_44_4 (LATCH)
+  Source Clock:      mem/RAM_44_cmp_eq0000 falling
+  Destination Clock: mem/RAM_44_cmp_eq0000 falling
+
+  Data Path: mem/RAM_44_4 to mem/RAM_44_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_44_4 (mem/RAM_44_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_44_mux0000<4>1 (mem/RAM_44_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_44_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_45_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_45_4 (LATCH)
+  Destination:       mem/RAM_45_4 (LATCH)
+  Source Clock:      mem/RAM_45_cmp_eq0000 falling
+  Destination Clock: mem/RAM_45_cmp_eq0000 falling
+
+  Data Path: mem/RAM_45_4 to mem/RAM_45_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_45_4 (mem/RAM_45_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_45_mux0000<4>1 (mem/RAM_45_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_45_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_46_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_46_4 (LATCH)
+  Destination:       mem/RAM_46_4 (LATCH)
+  Source Clock:      mem/RAM_46_cmp_eq0000 falling
+  Destination Clock: mem/RAM_46_cmp_eq0000 falling
+
+  Data Path: mem/RAM_46_4 to mem/RAM_46_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_46_4 (mem/RAM_46_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_46_mux0000<4>1 (mem/RAM_46_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_46_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_47_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_47_4 (LATCH)
+  Destination:       mem/RAM_47_4 (LATCH)
+  Source Clock:      mem/RAM_47_cmp_eq0000 falling
+  Destination Clock: mem/RAM_47_cmp_eq0000 falling
+
+  Data Path: mem/RAM_47_4 to mem/RAM_47_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_47_4 (mem/RAM_47_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_47_mux0000<4>1 (mem/RAM_47_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_47_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_48_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_48_4 (LATCH)
+  Destination:       mem/RAM_48_4 (LATCH)
+  Source Clock:      mem/RAM_48_cmp_eq0000 falling
+  Destination Clock: mem/RAM_48_cmp_eq0000 falling
+
+  Data Path: mem/RAM_48_4 to mem/RAM_48_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_48_4 (mem/RAM_48_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_48_mux0000<4>1 (mem/RAM_48_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_48_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_49_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_49_4 (LATCH)
+  Destination:       mem/RAM_49_4 (LATCH)
+  Source Clock:      mem/RAM_49_cmp_eq0000 falling
+  Destination Clock: mem/RAM_49_cmp_eq0000 falling
+
+  Data Path: mem/RAM_49_4 to mem/RAM_49_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_49_4 (mem/RAM_49_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_49_mux0000<4>1 (mem/RAM_49_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_49_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_50_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_50_4 (LATCH)
+  Destination:       mem/RAM_50_4 (LATCH)
+  Source Clock:      mem/RAM_50_cmp_eq0000 falling
+  Destination Clock: mem/RAM_50_cmp_eq0000 falling
+
+  Data Path: mem/RAM_50_4 to mem/RAM_50_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_50_4 (mem/RAM_50_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_50_mux0000<4>1 (mem/RAM_50_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_50_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_51_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_51_4 (LATCH)
+  Destination:       mem/RAM_51_4 (LATCH)
+  Source Clock:      mem/RAM_51_cmp_eq0000 falling
+  Destination Clock: mem/RAM_51_cmp_eq0000 falling
+
+  Data Path: mem/RAM_51_4 to mem/RAM_51_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_51_4 (mem/RAM_51_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_51_mux0000<4>1 (mem/RAM_51_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_51_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_52_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_52_4 (LATCH)
+  Destination:       mem/RAM_52_4 (LATCH)
+  Source Clock:      mem/RAM_52_cmp_eq0000 falling
+  Destination Clock: mem/RAM_52_cmp_eq0000 falling
+
+  Data Path: mem/RAM_52_4 to mem/RAM_52_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_52_4 (mem/RAM_52_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_52_mux0000<4>1 (mem/RAM_52_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_52_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_53_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_53_4 (LATCH)
+  Destination:       mem/RAM_53_4 (LATCH)
+  Source Clock:      mem/RAM_53_cmp_eq0000 falling
+  Destination Clock: mem/RAM_53_cmp_eq0000 falling
+
+  Data Path: mem/RAM_53_4 to mem/RAM_53_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_53_4 (mem/RAM_53_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_53_mux0000<4>1 (mem/RAM_53_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_53_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_54_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_54_4 (LATCH)
+  Destination:       mem/RAM_54_4 (LATCH)
+  Source Clock:      mem/RAM_54_cmp_eq0000 falling
+  Destination Clock: mem/RAM_54_cmp_eq0000 falling
+
+  Data Path: mem/RAM_54_4 to mem/RAM_54_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_54_4 (mem/RAM_54_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_54_mux0000<4>1 (mem/RAM_54_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_54_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_55_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_55_4 (LATCH)
+  Destination:       mem/RAM_55_4 (LATCH)
+  Source Clock:      mem/RAM_55_cmp_eq0000 falling
+  Destination Clock: mem/RAM_55_cmp_eq0000 falling
+
+  Data Path: mem/RAM_55_4 to mem/RAM_55_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_55_4 (mem/RAM_55_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_55_mux0000<4>1 (mem/RAM_55_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_55_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_56_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_56_4 (LATCH)
+  Destination:       mem/RAM_56_4 (LATCH)
+  Source Clock:      mem/RAM_56_cmp_eq0000 falling
+  Destination Clock: mem/RAM_56_cmp_eq0000 falling
+
+  Data Path: mem/RAM_56_4 to mem/RAM_56_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_56_4 (mem/RAM_56_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_56_mux0000<4>1 (mem/RAM_56_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_56_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_57_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_57_4 (LATCH)
+  Destination:       mem/RAM_57_4 (LATCH)
+  Source Clock:      mem/RAM_57_cmp_eq0000 falling
+  Destination Clock: mem/RAM_57_cmp_eq0000 falling
+
+  Data Path: mem/RAM_57_4 to mem/RAM_57_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_57_4 (mem/RAM_57_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_57_mux0000<4>1 (mem/RAM_57_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_57_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_58_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_58_4 (LATCH)
+  Destination:       mem/RAM_58_4 (LATCH)
+  Source Clock:      mem/RAM_58_cmp_eq0000 falling
+  Destination Clock: mem/RAM_58_cmp_eq0000 falling
+
+  Data Path: mem/RAM_58_4 to mem/RAM_58_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_58_4 (mem/RAM_58_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_58_mux0000<4>1 (mem/RAM_58_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_58_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_59_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_59_4 (LATCH)
+  Destination:       mem/RAM_59_4 (LATCH)
+  Source Clock:      mem/RAM_59_cmp_eq0000 falling
+  Destination Clock: mem/RAM_59_cmp_eq0000 falling
+
+  Data Path: mem/RAM_59_4 to mem/RAM_59_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_59_4 (mem/RAM_59_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_59_mux0000<4>1 (mem/RAM_59_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_59_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_60_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_60_4 (LATCH)
+  Destination:       mem/RAM_60_4 (LATCH)
+  Source Clock:      mem/RAM_60_cmp_eq0000 falling
+  Destination Clock: mem/RAM_60_cmp_eq0000 falling
+
+  Data Path: mem/RAM_60_4 to mem/RAM_60_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_60_4 (mem/RAM_60_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_60_mux0000<4>1 (mem/RAM_60_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_60_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_61_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_61_4 (LATCH)
+  Destination:       mem/RAM_61_4 (LATCH)
+  Source Clock:      mem/RAM_61_cmp_eq0000 falling
+  Destination Clock: mem/RAM_61_cmp_eq0000 falling
+
+  Data Path: mem/RAM_61_4 to mem/RAM_61_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_61_4 (mem/RAM_61_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_61_mux0000<4>1 (mem/RAM_61_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_61_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_62_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_62_4 (LATCH)
+  Destination:       mem/RAM_62_4 (LATCH)
+  Source Clock:      mem/RAM_62_cmp_eq0000 falling
+  Destination Clock: mem/RAM_62_cmp_eq0000 falling
+
+  Data Path: mem/RAM_62_4 to mem/RAM_62_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_62_4 (mem/RAM_62_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_62_mux0000<4>1 (mem/RAM_62_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_62_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mem/RAM_63_cmp_eq0000'
+  Clock period: 1.834ns (frequency: 545.271MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               1.834ns (Levels of Logic = 1)
+  Source:            mem/RAM_63_4 (LATCH)
+  Destination:       mem/RAM_63_4 (LATCH)
+  Source Clock:      mem/RAM_63_cmp_eq0000 falling
+  Destination Clock: mem/RAM_63_cmp_eq0000 falling
+
+  Data Path: mem/RAM_63_4 to mem/RAM_63_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.629   0.446  mem/RAM_63_4 (mem/RAM_63_4)
+     LUT3:I1->O            1   0.562   0.000  mem/RAM_63_mux0000<4>1 (mem/RAM_63_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_63_4
+    ----------------------------------------
+    Total                      1.834ns (1.388ns logic, 0.446ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_0_not0001'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_0_4 (LATCH)
+  Destination Clock: mem/RAM_0_not0001 rising
+
+  Data Path: save to mem/RAM_0_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_0_mux0000<4>1 (mem/RAM_0_mux0000<4>)
+     LDE_1:D                   0.197          mem/RAM_0_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_1_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_1_4 (LATCH)
+  Destination Clock: mem/RAM_1_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_1_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_1_mux0000<4>1 (mem/RAM_1_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_1_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_2_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_2_4 (LATCH)
+  Destination Clock: mem/RAM_2_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_2_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_2_mux0000<4>1 (mem/RAM_2_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_2_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_3_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_3_4 (LATCH)
+  Destination Clock: mem/RAM_3_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_3_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_3_mux0000<4>1 (mem/RAM_3_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_3_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_4_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_4_4 (LATCH)
+  Destination Clock: mem/RAM_4_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_4_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_4_mux0000<4>1 (mem/RAM_4_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_4_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_5_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_5_4 (LATCH)
+  Destination Clock: mem/RAM_5_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_5_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_5_mux0000<4>1 (mem/RAM_5_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_5_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_6_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_6_4 (LATCH)
+  Destination Clock: mem/RAM_6_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_6_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_6_mux0000<4>1 (mem/RAM_6_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_6_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_7_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_7_4 (LATCH)
+  Destination Clock: mem/RAM_7_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_7_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_7_mux0000<4>1 (mem/RAM_7_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_7_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_8_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_8_4 (LATCH)
+  Destination Clock: mem/RAM_8_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_8_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_8_mux0000<4>1 (mem/RAM_8_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_8_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_9_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_9_4 (LATCH)
+  Destination Clock: mem/RAM_9_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_9_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_9_mux0000<4>1 (mem/RAM_9_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_9_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_10_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_10_4 (LATCH)
+  Destination Clock: mem/RAM_10_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_10_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_10_mux0000<4>1 (mem/RAM_10_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_10_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_11_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_11_4 (LATCH)
+  Destination Clock: mem/RAM_11_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_11_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_11_mux0000<4>1 (mem/RAM_11_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_11_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_12_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_12_4 (LATCH)
+  Destination Clock: mem/RAM_12_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_12_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_12_mux0000<4>1 (mem/RAM_12_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_12_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_13_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_13_4 (LATCH)
+  Destination Clock: mem/RAM_13_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_13_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_13_mux0000<4>1 (mem/RAM_13_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_13_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_14_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_14_4 (LATCH)
+  Destination Clock: mem/RAM_14_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_14_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_14_mux0000<4>1 (mem/RAM_14_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_14_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_15_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_15_4 (LATCH)
+  Destination Clock: mem/RAM_15_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_15_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_15_mux0000<4>1 (mem/RAM_15_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_15_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_16_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_16_4 (LATCH)
+  Destination Clock: mem/RAM_16_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_16_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_16_mux0000<4>1 (mem/RAM_16_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_16_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_17_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_17_4 (LATCH)
+  Destination Clock: mem/RAM_17_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_17_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_17_mux0000<4>1 (mem/RAM_17_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_17_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_18_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_18_4 (LATCH)
+  Destination Clock: mem/RAM_18_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_18_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_18_mux0000<4>1 (mem/RAM_18_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_18_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_19_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_19_4 (LATCH)
+  Destination Clock: mem/RAM_19_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_19_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_19_mux0000<4>1 (mem/RAM_19_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_19_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_20_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_20_4 (LATCH)
+  Destination Clock: mem/RAM_20_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_20_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_20_mux0000<4>1 (mem/RAM_20_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_20_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_21_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_21_4 (LATCH)
+  Destination Clock: mem/RAM_21_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_21_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_21_mux0000<4>1 (mem/RAM_21_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_21_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_22_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_22_4 (LATCH)
+  Destination Clock: mem/RAM_22_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_22_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_22_mux0000<4>1 (mem/RAM_22_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_22_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_23_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_23_4 (LATCH)
+  Destination Clock: mem/RAM_23_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_23_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_23_mux0000<4>1 (mem/RAM_23_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_23_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_24_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_24_4 (LATCH)
+  Destination Clock: mem/RAM_24_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_24_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_24_mux0000<4>1 (mem/RAM_24_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_24_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_25_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_25_4 (LATCH)
+  Destination Clock: mem/RAM_25_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_25_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_25_mux0000<4>1 (mem/RAM_25_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_25_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_26_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_26_4 (LATCH)
+  Destination Clock: mem/RAM_26_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_26_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_26_mux0000<4>1 (mem/RAM_26_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_26_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_27_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_27_4 (LATCH)
+  Destination Clock: mem/RAM_27_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_27_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_27_mux0000<4>1 (mem/RAM_27_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_27_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_28_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_28_4 (LATCH)
+  Destination Clock: mem/RAM_28_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_28_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_28_mux0000<4>1 (mem/RAM_28_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_28_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_29_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_29_4 (LATCH)
+  Destination Clock: mem/RAM_29_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_29_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_29_mux0000<4>1 (mem/RAM_29_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_29_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_30_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_30_4 (LATCH)
+  Destination Clock: mem/RAM_30_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_30_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_30_mux0000<4>1 (mem/RAM_30_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_30_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_31_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_31_4 (LATCH)
+  Destination Clock: mem/RAM_31_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_31_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_31_mux0000<4>1 (mem/RAM_31_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_31_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_32_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_32_4 (LATCH)
+  Destination Clock: mem/RAM_32_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_32_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_32_mux0000<4>1 (mem/RAM_32_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_32_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_33_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_33_4 (LATCH)
+  Destination Clock: mem/RAM_33_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_33_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_33_mux0000<4>1 (mem/RAM_33_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_33_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_34_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_34_4 (LATCH)
+  Destination Clock: mem/RAM_34_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_34_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_34_mux0000<4>1 (mem/RAM_34_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_34_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_35_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_35_4 (LATCH)
+  Destination Clock: mem/RAM_35_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_35_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_35_mux0000<4>1 (mem/RAM_35_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_35_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_36_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_36_4 (LATCH)
+  Destination Clock: mem/RAM_36_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_36_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_36_mux0000<4>1 (mem/RAM_36_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_36_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_37_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_37_4 (LATCH)
+  Destination Clock: mem/RAM_37_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_37_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_37_mux0000<4>1 (mem/RAM_37_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_37_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_38_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_38_4 (LATCH)
+  Destination Clock: mem/RAM_38_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_38_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_38_mux0000<4>1 (mem/RAM_38_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_38_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_39_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_39_4 (LATCH)
+  Destination Clock: mem/RAM_39_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_39_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_39_mux0000<4>1 (mem/RAM_39_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_39_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_40_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_40_4 (LATCH)
+  Destination Clock: mem/RAM_40_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_40_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_40_mux0000<4>1 (mem/RAM_40_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_40_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_41_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_41_4 (LATCH)
+  Destination Clock: mem/RAM_41_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_41_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_41_mux0000<4>1 (mem/RAM_41_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_41_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_42_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_42_4 (LATCH)
+  Destination Clock: mem/RAM_42_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_42_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_42_mux0000<4>1 (mem/RAM_42_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_42_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_43_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_43_4 (LATCH)
+  Destination Clock: mem/RAM_43_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_43_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_43_mux0000<4>1 (mem/RAM_43_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_43_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_44_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_44_4 (LATCH)
+  Destination Clock: mem/RAM_44_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_44_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_44_mux0000<4>1 (mem/RAM_44_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_44_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_45_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_45_4 (LATCH)
+  Destination Clock: mem/RAM_45_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_45_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_45_mux0000<4>1 (mem/RAM_45_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_45_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_46_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_46_4 (LATCH)
+  Destination Clock: mem/RAM_46_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_46_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_46_mux0000<4>1 (mem/RAM_46_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_46_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_47_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_47_4 (LATCH)
+  Destination Clock: mem/RAM_47_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_47_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_47_mux0000<4>1 (mem/RAM_47_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_47_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_48_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_48_4 (LATCH)
+  Destination Clock: mem/RAM_48_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_48_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_48_mux0000<4>1 (mem/RAM_48_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_48_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_49_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_49_4 (LATCH)
+  Destination Clock: mem/RAM_49_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_49_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_49_mux0000<4>1 (mem/RAM_49_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_49_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_50_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_50_4 (LATCH)
+  Destination Clock: mem/RAM_50_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_50_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_50_mux0000<4>1 (mem/RAM_50_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_50_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_51_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_51_4 (LATCH)
+  Destination Clock: mem/RAM_51_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_51_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_51_mux0000<4>1 (mem/RAM_51_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_51_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_52_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_52_4 (LATCH)
+  Destination Clock: mem/RAM_52_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_52_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_52_mux0000<4>1 (mem/RAM_52_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_52_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_53_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_53_4 (LATCH)
+  Destination Clock: mem/RAM_53_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_53_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_53_mux0000<4>1 (mem/RAM_53_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_53_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_54_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_54_4 (LATCH)
+  Destination Clock: mem/RAM_54_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_54_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_54_mux0000<4>1 (mem/RAM_54_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_54_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_55_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_55_4 (LATCH)
+  Destination Clock: mem/RAM_55_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_55_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_55_mux0000<4>1 (mem/RAM_55_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_55_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_56_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_56_4 (LATCH)
+  Destination Clock: mem/RAM_56_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_56_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_56_mux0000<4>1 (mem/RAM_56_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_56_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_57_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_57_4 (LATCH)
+  Destination Clock: mem/RAM_57_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_57_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_57_mux0000<4>1 (mem/RAM_57_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_57_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_58_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_58_4 (LATCH)
+  Destination Clock: mem/RAM_58_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_58_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_58_mux0000<4>1 (mem/RAM_58_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_58_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_59_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_59_4 (LATCH)
+  Destination Clock: mem/RAM_59_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_59_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_59_mux0000<4>1 (mem/RAM_59_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_59_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_60_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_60_4 (LATCH)
+  Destination Clock: mem/RAM_60_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_60_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_60_mux0000<4>1 (mem/RAM_60_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_60_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_61_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_61_4 (LATCH)
+  Destination Clock: mem/RAM_61_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_61_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_61_mux0000<4>1 (mem/RAM_61_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_61_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_62_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_62_4 (LATCH)
+  Destination Clock: mem/RAM_62_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_62_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_62_mux0000<4>1 (mem/RAM_62_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_62_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mem/RAM_63_cmp_eq0000'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              2.840ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       mem/RAM_63_4 (LATCH)
+  Destination Clock: mem/RAM_63_cmp_eq0000 falling
+
+  Data Path: save to mem/RAM_63_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           321   0.824   1.258  save_IBUF (save_IBUF1)
+     LUT3:I0->O            1   0.561   0.000  mem/RAM_63_mux0000<4>1 (mem/RAM_63_mux0000<4>)
+     LDE:D                     0.197          mem/RAM_63_4
+    ----------------------------------------
+    Total                      2.840ns (1.582ns logic, 1.258ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV1/clk_div'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.248ns (Levels of Logic = 1)
+  Source:            buzzer/out_temp (FF)
+  Destination:       p_out (PAD)
+  Source Clock:      DIV1/clk_div rising
+
+  Data Path: buzzer/out_temp to p_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.495   0.357  buzzer/out_temp (buzzer/out_temp)
+     OBUF:I->O                 4.396          p_out_OBUF (p_out)
+    ----------------------------------------
+    Total                      5.248ns (4.891ns logic, 0.357ns route)
+                                       (93.2% logic, 6.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'buzzer/ready'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              5.493ns (Levels of Logic = 1)
+  Source:            read_address_counter/c_0 (FF)
+  Destination:       mem_out_add<0> (PAD)
+  Source Clock:      buzzer/ready rising
+
+  Data Path: read_address_counter/c_0 to mem_out_add<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.495   0.602  read_address_counter/c_0 (read_address_counter/c_0)
+     OBUF:I->O                 4.396          mem_out_add_0_OBUF (mem_out_add<0>)
+    ----------------------------------------
+    Total                      5.493ns (4.891ns logic, 0.602ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.46 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.60 secs
  
 --> 
 
-Total memory usage is 4520420 kilobytes
+Total memory usage is 4552892 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   70 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

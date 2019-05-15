@@ -2,28 +2,28 @@ Command line:
    BuzzerTest_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50374
+     -socket  50581
 
-Wed May 15 15:28:59 2019
+Wed May 15 15:48:58 2019
 
 
- Elaboration Time: 0.078125 sec
+ Elaboration Time: 0.0625 sec
 
- Current Memory Usage: 5496.13 Meg
+ Current Memory Usage: 5496.16 Meg
 
- Total Signals          : 12
- Total Nets             : 47
- Total Signal Drivers   : 8
+ Total Signals          : 14
+ Total Nets             : 48
+ Total Signal Drivers   : 9
  Total Blocks           : 3
  Total Primitive Blocks : 2
  Total Processes        : 5
  Total Traceable Variables  : 9
- Total Scalar Nets and Variables : 408
-Total Line Count : 33
+ Total Scalar Nets and Variables : 409
+Total Line Count : 35
 
- Total Simulation Time: 0.109375 sec
+ Total Simulation Time: 0.90625 sec
 
- Current Memory Usage: 5496.13 Meg
+ Current Memory Usage: 4709.73 Meg
 
-Wed May 15 15:29:37 2019
+Wed May 15 15:56:17 2019
 

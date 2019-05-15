@@ -1,4 +1,12 @@
-AR clockdivider behavioral "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" sub00/vhpl03 1557828081
-EN labproject NULL "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" sub00/vhpl00 1557825686
-AR labproject behavioral "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" sub00/vhpl01 1557825687
-EN clockdivider NULL "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" sub00/vhpl02 1557828080
+AR clockdivider behavioral "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" sub00/vhpl03 1557930932
+AR counter behavioral "G:/My Drive/ELEC/project/LabProject/Counter.vhd" sub00/vhpl07 1557930934
+EN labproject NULL "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" sub00/vhpl00 1557930941
+EN morsedecoder NULL "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd" sub00/vhpl10 1557930937
+EN buzzerinterface NULL "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd" sub00/vhpl04 1557930939
+AR buzzerinterface behavioral "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd" sub00/vhpl05 1557930940
+EN memory NULL "G:/My Drive/ELEC/project/LabProject/Memory.vhd" sub00/vhpl08 1557930935
+EN counter NULL "G:/My Drive/ELEC/project/LabProject/Counter.vhd" sub00/vhpl06 1557930933
+AR labproject behavioral "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" sub00/vhpl01 1557930942
+EN clockdivider NULL "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" sub00/vhpl02 1557930931
+AR memory behavioral "G:/My Drive/ELEC/project/LabProject/Memory.vhd" sub00/vhpl09 1557930936
+AR morsedecoder behavioral "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd" sub00/vhpl11 1557930938

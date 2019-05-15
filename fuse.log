@@ -1,18 +1,31 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o G:/My Drive/ELEC/project/LabProject/BuzzerTest_isim_beh.exe -prj G:/My Drive/ELEC/project/LabProject/BuzzerTest_beh.prj work.BuzzerTest 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o G:/My Drive/ELEC/project/LabProject/ProjTest_isim_beh.exe -prj G:/My Drive/ELEC/project/LabProject/ProjTest_beh.prj work.ProjTest 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/MorseDecoder.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/Memory.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/Counter.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" into library work
 Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd" into library work
-Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/BuzzerTest.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" into library work
+Parsing VHDL file "G:/My Drive/ELEC/project/LabProject/ProjTest.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity ClockDivider [\ClockDivider(5000000)\]
+Compiling architecture behavioral of entity Counter [counter_default]
+Compiling architecture behavioral of entity Memory [memory_default]
+Compiling architecture behavioral of entity MorseDecoder [morsedecoder_default]
 Compiling architecture behavioral of entity BuzzerInterface [buzzerinterface_default]
-Compiling architecture behavior of entity buzzertest
+Compiling architecture behavioral of entity LabProject [labproject_default]
+Compiling architecture behavior of entity projtest
 Time Resolution for simulation is 1ps.
-Compiled 5 VHDL Units
-Built simulation executable G:/My Drive/ELEC/project/LabProject/BuzzerTest_isim_beh.exe
-Fuse Memory Usage: 29396 KB
-Fuse CPU Usage: 327 ms
+Compiled 18 VHDL Units
+Built simulation executable G:/My Drive/ELEC/project/LabProject/ProjTest_isim_beh.exe
+Fuse Memory Usage: 36436 KB
+Fuse CPU Usage: 515 ms

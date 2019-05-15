@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\My Drive\ELEC\project\LabProject\LabProject.ncd
+OUTFILE=G:\My Drive\ELEC\project\LabProject\LabProject.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5vq100
+WORKINGDIR=G:\My Drive\ELEC\project\LabProject
+LICENSE=WebPack
+USER_INFO=211688462_0_0_674

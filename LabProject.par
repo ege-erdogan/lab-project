@@ -1,0 +1,694 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-BD7B6N6::  Wed May 15 17:35:53 2019
+
+par -w -intstyle ise -ol high -t 1 LabProject_map.ncd LabProject.ncd
+LabProject.pcf 
+
+
+Constraints file: LabProject.pcf.
+Loading device for application Rf_Device from file '3s50a.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "LabProject" is an NCD, version 3.2, device xc3s50a, package vq100, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.42 2013-10-13".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          15 out of 68     22%
+
+   Number of External Input IOBs                  8
+
+      Number of External Input IBUFs              8
+        Number of LOCed External Input IBUFs      8 out of 8     100%
+
+
+   Number of External Output IOBs                 7
+
+      Number of External Output IOBs              7
+        Number of LOCed External Output IOBs      7 out of 7     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        2 out of 24      8%
+   Number of Slices                        382 out of 704    54%
+      Number of SLICEMs                     40 out of 352    11%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 1 secs 
+Finished initial Timing Analysis.  REAL time: 1 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 1 secs 
+Total CPU  time at the beginning of Placer: 1 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:374fd4bd) REAL time: 1 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:374fd4bd) REAL time: 1 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:374fd4bd) REAL time: 1 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:42d3a695) REAL time: 2 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:42d3a695) REAL time: 2 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:42d3a695) REAL time: 2 secs 
+
+Phase 7.8  Global Placement
+...................................
+.........
+Phase 7.8  Global Placement (Checksum:9d0f15c7) REAL time: 2 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:9d0f15c7) REAL time: 2 secs 
+
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:ec4b1694) REAL time: 2 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:ec4b1694) REAL time: 2 secs 
+
+Total REAL time to Placer completion: 2 secs 
+Total CPU  time to Placer completion: 2 secs 
+Writing design to file LabProject.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 2697 unrouted;      REAL time: 3 secs 
+
+Phase  2  : 2556 unrouted;      REAL time: 3 secs 
+
+Phase  3  : 609 unrouted;      REAL time: 3 secs 
+
+Phase  4  : 693 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+
+Updating file: LabProject.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Updating file: LabProject.ncd with current fully routed design.
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+WARNING:Route:455 - CLK Net:reading may have excessive skew because 
+      0 CLK pins and 198 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_20_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_21_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_13_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_30_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_22_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_14_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_31_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_23_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_40_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_24_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_16_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_41_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_25_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_17_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_50_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_42_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_34_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_51_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_43_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_60_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_52_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_44_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_36_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_28_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_61_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_53_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_45_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_37_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_62_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_54_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_46_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_63_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_55_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_47_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_57_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_58_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:buzzer/ready may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_3_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_4_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_5_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_8_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mem/RAM_9_cmp_eq0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:DIV1/clk_div may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 13 secs 
+Total CPU time to Router completion: 12 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP |  BUFGMUX_X1Y1| No   |   13 |  0.062     |  0.595      |
++---------------------+--------------+------+------+------------+-------------+
+|           save_IBUF |  BUFGMUX_X2Y1| No   |    5 |  0.015     |  0.483      |
++---------------------+--------------+------+------+------------+-------------+
+|        DIV1/clk_div |         Local|      |   18 |  0.209     |  1.915      |
++---------------------+--------------+------+------+------------+-------------+
+|             reading |         Local|      |  201 |  0.087     |  1.817      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_10_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.029     |  1.019      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_11_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.019     |  1.602      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_20_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.920     |  1.917      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_12_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.028     |  1.593      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_21_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.564     |  1.575      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_13_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.523     |  1.281      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_30_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.569     |  1.327      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_22_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.949     |  1.718      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_14_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.457     |  1.219      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_31_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.748     |  1.360      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_23_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.843     |  1.562      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_15_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.120     |  1.669      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_40_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.921     |  1.655      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_32_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.199     |  1.675      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_24_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.574     |  1.305      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_16_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.755     |  1.505      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_41_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.568     |  1.325      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_33_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.122     |  1.607      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_25_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.117     |  0.753      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_17_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  1.193     |  1.941      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_50_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.845     |  1.372      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_42_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.764     |  1.438      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_34_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  1.018     |  1.582      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_26_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.074     |  1.593      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_18_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.063     |  1.553      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_51_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.433     |  1.010      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_43_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.529     |  1.258      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_35_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.265     |  1.711      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_27_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.303     |  1.837      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_19_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.057     |  1.533      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_60_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.487     |  1.193      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_52_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.879     |  1.657      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_44_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.909     |  1.477      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_36_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.475     |  1.232      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_28_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.462     |  1.012      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_61_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.598     |  1.377      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_53_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  1.427     |  2.202      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_45_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  1.026     |  1.674      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_37_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.350     |  0.935      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_29_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.015     |  0.980      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_62_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.701     |  1.208      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_54_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  1.223     |  1.738      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_46_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.932     |  1.431      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_38_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.304     |  1.758      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_63_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.544     |  1.640      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_55_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.806     |  1.593      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_47_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.375     |  0.886      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_39_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.476     |  2.050      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_56_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.169     |  1.669      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_48_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.201     |  1.734      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_57_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.781     |  1.577      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_49_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.108     |  1.615      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_58_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.430     |  1.201      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_59_cmp_eq000 |              |      |      |            |             |
+|                   0 |         Local|      |    3 |  0.647     |  2.250      |
++---------------------+--------------+------+------+------------+-------------+
+|        buzzer/ready |         Local|      |    4 |  0.023     |  0.842      |
++---------------------+--------------+------+------+------------+-------------+
+|   mem/RAM_0_not0001 |         Local|      |    3 |  0.062     |  1.559      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_1_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.111     |  1.085      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_2_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.064     |  1.674      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_3_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.689     |  1.708      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_4_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.650     |  1.683      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_5_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.603     |  1.713      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_6_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.015     |  1.290      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_7_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.294     |  1.823      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_8_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.218     |  1.262      |
++---------------------+--------------+------+------+------------+-------------+
+|mem/RAM_9_cmp_eq0000 |              |      |      |            |             |
+|                     |         Local|      |    3 |  0.765     |  1.547      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.365ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     1.063ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net DIV | SETUP       |         N/A|     3.213ns|     N/A|           0
+  1/clk_div                                 | HOLD        |     0.994ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sav | SETUP       |         N/A|     2.331ns|     N/A|           0
+  e_IBUF                                    | HOLD        |     1.085ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.713ns|     N/A|           0
+  /RAM_10_cmp_eq0000                        | HOLD        |     1.215ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.972ns|     N/A|           0
+  /RAM_11_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.917ns|     N/A|           0
+  /RAM_20_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.935ns|     N/A|           0
+  /RAM_12_cmp_eq0000                        | HOLD        |     1.142ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.864ns|     N/A|           0
+  /RAM_21_cmp_eq0000                        | HOLD        |     1.230ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.762ns|     N/A|           0
+  /RAM_13_cmp_eq0000                        | HOLD        |     1.192ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.744ns|     N/A|           0
+  /RAM_30_cmp_eq0000                        | HOLD        |     1.166ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.856ns|     N/A|           0
+  /RAM_22_cmp_eq0000                        | HOLD        |     1.247ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.191ns|     N/A|           0
+  /RAM_14_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.879ns|     N/A|           0
+  /RAM_31_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.832ns|     N/A|           0
+  /RAM_23_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.747ns|     N/A|           0
+  /RAM_15_cmp_eq0000                        | HOLD        |     1.230ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.743ns|     N/A|           0
+  /RAM_40_cmp_eq0000                        | HOLD        |     1.167ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.897ns|     N/A|           0
+  /RAM_32_cmp_eq0000                        | HOLD        |     1.209ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.740ns|     N/A|           0
+  /RAM_24_cmp_eq0000                        | HOLD        |     1.167ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.191ns|     N/A|           0
+  /RAM_16_cmp_eq0000                        | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.849ns|     N/A|           0
+  /RAM_41_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.027ns|     N/A|           0
+  /RAM_33_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.658ns|     N/A|           0
+  /RAM_25_cmp_eq0000                        | HOLD        |     1.142ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.934ns|     N/A|           0
+  /RAM_17_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.855ns|     N/A|           0
+  /RAM_50_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.456ns|     N/A|           0
+  /RAM_42_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.758ns|     N/A|           0
+  /RAM_34_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.825ns|     N/A|           0
+  /RAM_26_cmp_eq0000                        | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.920ns|     N/A|           0
+  /RAM_18_cmp_eq0000                        | HOLD        |     1.230ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.851ns|     N/A|           0
+  /RAM_51_cmp_eq0000                        | HOLD        |     1.230ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.166ns|     N/A|           0
+  /RAM_43_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.202ns|     N/A|           0
+  /RAM_35_cmp_eq0000                        | HOLD        |     1.228ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.163ns|     N/A|           0
+  /RAM_27_cmp_eq0000                        | HOLD        |     1.167ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.864ns|     N/A|           0
+  /RAM_19_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.693ns|     N/A|           0
+  /RAM_60_cmp_eq0000                        | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.863ns|     N/A|           0
+  /RAM_52_cmp_eq0000                        | HOLD        |     1.193ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.870ns|     N/A|           0
+  /RAM_44_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.667ns|     N/A|           0
+  /RAM_36_cmp_eq0000                        | HOLD        |     1.142ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.651ns|     N/A|           0
+  /RAM_28_cmp_eq0000                        | HOLD        |     1.185ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.069ns|     N/A|           0
+  /RAM_61_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.855ns|     N/A|           0
+  /RAM_53_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.070ns|     N/A|           0
+  /RAM_45_cmp_eq0000                        | HOLD        |     1.283ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.776ns|     N/A|           0
+  /RAM_37_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.248ns|     N/A|           0
+  /RAM_29_cmp_eq0000                        | HOLD        |     1.230ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.429ns|     N/A|           0
+  /RAM_62_cmp_eq0000                        | HOLD        |     1.186ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.290ns|     N/A|           0
+  /RAM_54_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.216ns|     N/A|           0
+  /RAM_46_cmp_eq0000                        | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.676ns|     N/A|           0
+  /RAM_38_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.950ns|     N/A|           0
+  /RAM_63_cmp_eq0000                        | HOLD        |     1.230ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.754ns|     N/A|           0
+  /RAM_55_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.358ns|     N/A|           0
+  /RAM_47_cmp_eq0000                        | HOLD        |     1.210ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.971ns|     N/A|           0
+  /RAM_39_cmp_eq0000                        | HOLD        |     1.167ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.289ns|     N/A|           0
+  /RAM_56_cmp_eq0000                        | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.864ns|     N/A|           0
+  /RAM_48_cmp_eq0000                        | HOLD        |     1.216ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.870ns|     N/A|           0
+  /RAM_57_cmp_eq0000                        | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.224ns|     N/A|           0
+  /RAM_49_cmp_eq0000                        | HOLD        |     1.247ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.855ns|     N/A|           0
+  /RAM_58_cmp_eq0000                        | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.206ns|     N/A|           0
+  /RAM_59_cmp_eq0000                        | HOLD        |     1.231ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net buz | SETUP       |         N/A|     2.535ns|     N/A|           0
+  zer/ready                                 | HOLD        |     1.060ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.649ns|     N/A|           0
+  /RAM_0_not0001                            | HOLD        |     1.142ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.289ns|     N/A|           0
+  /RAM_1_cmp_eq0000                         | HOLD        |     1.230ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.693ns|     N/A|           0
+  /RAM_2_cmp_eq0000                         | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.775ns|     N/A|           0
+  /RAM_3_cmp_eq0000                         | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.836ns|     N/A|           0
+  /RAM_4_cmp_eq0000                         | HOLD        |     1.229ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.775ns|     N/A|           0
+  /RAM_5_cmp_eq0000                         | HOLD        |     1.209ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.667ns|     N/A|           0
+  /RAM_6_cmp_eq0000                         | HOLD        |     1.142ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     2.247ns|     N/A|           0
+  /RAM_7_cmp_eq0000                         | HOLD        |     1.229ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.740ns|     N/A|           0
+  /RAM_8_cmp_eq0000                         | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mem | SETUP       |         N/A|     1.712ns|     N/A|           0
+  /RAM_9_cmp_eq0000                         | HOLD        |     1.143ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 15 secs 
+Total CPU time to PAR completion: 13 secs 
+
+Peak Memory Usage:  4476 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 44
+Number of info messages: 1
+
+Writing design to file LabProject.ncd
+
+
+
+PAR done!

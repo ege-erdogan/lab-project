@@ -1,1 +1,6 @@
 work	"BuzzerInterface.vhd"
+work	"ClockDivider.vhd"
+work	"Counter.vhd"
+work	"LabProject.vhd"
+work	"Memory.vhd"
+work	"MorseDecoder.vhd"

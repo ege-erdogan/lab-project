@@ -34,7 +34,8 @@ entity BuzzerInterface is
 		data_in: in std_logic_vector(13 downto 0) := "00000000000000";
 		clk: in std_logic;
 		reg_out: out std_logic_vector(13 downto 0);
-		data_out: out std_logic
+		data_out: out std_logic;
+		ready: out std_logic := '1'
 	);
 end BuzzerInterface;
 
@@ -52,7 +53,9 @@ begin
 				if last = '0' and reg(13) = '0' then
 					out_temp <= '0';
 					shift_ctrl <= '0';
+					ready <= '1';
 				else 
+					ready <= '0';
 					out_temp <= reg(13);
 					last <= reg(13);
 					reg(13) <= reg(12);
@@ -74,7 +77,7 @@ begin
 				reg <= data_in;
 				shift_ctrl <= '1';
 			end if;
-		END IF;
+		end if;
 	end process;
 			
 	reg_out <= reg;
