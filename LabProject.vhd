@@ -43,7 +43,7 @@ end LabProject;
 architecture Behavioral of LabProject is
 	
 	component ClockDivider is
-		Generic (N: INTEGER := 5 * 10**6); -- frequency
+		Generic (N: INTEGER := 10 * 10**6); -- frequency
 		Port (
 			clk_in: in std_logic;
 			clk_out: out std_logic

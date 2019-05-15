@@ -43,21 +43,23 @@ architecture Behavioral of BuzzerInterface is
 	signal reg : std_logic_vector(13 downto 0) := "00000000000000";
 	signal shift_ctrl: std_logic := '1';
 	signal out_temp: std_logic := '0';
-	signal last: std_logic;
+	signal last1: std_logic;
+	signal last2: std_logic;
 	
 begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
 			if shift_ctrl = '1' then
-				if last = '0' and reg(13) = '0' then
+				if last1 = '0' and last2 = '0' and reg(13) = '0' then
 					out_temp <= '0';
 					shift_ctrl <= '0';
 					ready <= '1';
 				else 
 					ready <= '0';
 					out_temp <= reg(13);
-					last <= reg(13);
+					last2 <= last1;
+					last1 <= reg(13);
 					reg(13) <= reg(12);
 					reg(12) <= reg(11);
 					reg(11) <= reg(10);

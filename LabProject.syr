@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: LabProject.prj
 
@@ -124,7 +124,7 @@ Entity <labproject> (Architecture <behavioral>) compiled.
 Analyzing hierarchy for entity <LabProject> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <ClockDivider> in library <work> (architecture <behavioral>) with generics.
-	N = 5000000
+	N = 10000000
 
 Analyzing hierarchy for entity <Counter> in library <work> (architecture <behavioral>).
 
@@ -145,7 +145,7 @@ WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/LabProject.vhd" line 125:
 Entity <LabProject> analyzed. Unit <LabProject> generated.
 
 Analyzing generic Entity <ClockDivider> in library <work> (Architecture <behavioral>).
-	N = 5000000
+	N = 10000000
 WARNING:Xst:819 - "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <clk_div>
 Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
@@ -174,8 +174,8 @@ Performing bidirectional port resolution...
 Synthesizing Unit <ClockDivider>.
     Related source file is "G:/My Drive/ELEC/project/LabProject/ClockDivider.vhd".
     Found 1-bit register for signal <clk_div>.
-    Found 23-bit up counter for signal <counter>.
-    Found 23-bit adder for signal <counter$addsub0000> created at line 48.
+    Found 24-bit up counter for signal <counter>.
+    Found 24-bit adder for signal <counter$addsub0000> created at line 48.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -275,12 +275,13 @@ Unit <MorseDecoder> synthesized.
 Synthesizing Unit <BuzzerInterface>.
     Related source file is "G:/My Drive/ELEC/project/LabProject/BuzzerInterface.vhd".
     Found 1-bit register for signal <ready>.
-    Found 1-bit register for signal <last>.
+    Found 1-bit register for signal <last1>.
+    Found 1-bit register for signal <last2>.
     Found 1-bit register for signal <out_temp>.
     Found 14-bit register for signal <reg>.
     Found 1-bit register for signal <shift_ctrl>.
     Summary:
-	inferred  18 D-type flip-flop(s).
+	inferred  19 D-type flip-flop(s).
 Unit <BuzzerInterface> synthesized.
 
 
@@ -297,12 +298,12 @@ Macro Statistics
 # ROMs                                                 : 1
  32x14-bit ROM                                         : 1
 # Adders/Subtractors                                   : 1
- 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
 # Counters                                             : 3
- 23-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
  6-bit up counter                                      : 2
-# Registers                                            : 19
- 1-bit register                                        : 19
+# Registers                                            : 20
+ 1-bit register                                        : 20
 # Latches                                              : 66
  1-bit latch                                           : 1
  5-bit latch                                           : 65
@@ -323,12 +324,12 @@ Macro Statistics
 # ROMs                                                 : 1
  32x14-bit ROM                                         : 1
 # Adders/Subtractors                                   : 1
- 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
 # Counters                                             : 3
- 23-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
  6-bit up counter                                      : 2
-# Registers                                            : 19
- Flip-Flops                                            : 19
+# Registers                                            : 20
+ Flip-Flops                                            : 20
 # Latches                                              : 66
  1-bit latch                                           : 1
  5-bit latch                                           : 65
@@ -357,8 +358,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 54
- Flip-Flops                                            : 54
+# Registers                                            : 56
+ Flip-Flops                                            : 56
 
 =========================================================================
 
@@ -387,24 +388,24 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 936
+# BELS                             : 942
 #      GND                         : 1
 #      INV                         : 7
-#      LUT1                        : 44
-#      LUT2                        : 4
-#      LUT3                        : 520
-#      LUT4                        : 101
-#      MUXCY                       : 50
+#      LUT1                        : 46
+#      LUT2                        : 2
+#      LUT3                        : 519
+#      LUT4                        : 104
+#      MUXCY                       : 52
 #      MUXF5                       : 89
 #      MUXF6                       : 43
 #      MUXF7                       : 20
 #      MUXF8                       : 10
 #      VCC                         : 1
-#      XORCY                       : 46
-# FlipFlops/Latches                : 380
+#      XORCY                       : 48
+# FlipFlops/Latches                : 382
 #      FDC                         : 12
-#      FDE                         : 18
-#      FDR                         : 23
+#      FDE                         : 19
+#      FDR                         : 24
 #      FDSE                        : 1
 #      LD                          : 5
 #      LDE                         : 315
@@ -424,8 +425,8 @@ Device utilization summary:
 Selected Device : 3s50avq100-5 
 
  Number of Slices:                      374  out of    704    53%  
- Number of Slice Flip Flops:            380  out of   1408    26%  
- Number of 4 input LUTs:                676  out of   1408    48%  
+ Number of Slice Flip Flops:            382  out of   1408    27%  
+ Number of 4 input LUTs:                678  out of   1408    48%  
  Number of IOs:                          15
  Number of bonded IOBs:                  15  out of     68    22%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -452,9 +453,9 @@ Clock Information:
 Clock Signal                                   | Clock buffer(FF name)         | Load  |
 -----------------------------------------------+-------------------------------+-------+
 save                                           | IBUF+BUFG                     | 7     |
-clk                                            | BUFGP                         | 24    |
+clk                                            | BUFGP                         | 25    |
 buzzer/ready                                   | NONE(read_address_counter/c_0)| 6     |
-DIV1/clk_div                                   | NONE(buzzer/out_temp)         | 18    |
+DIV1/clk_div                                   | NONE(buzzer/last2)            | 19    |
 reading                                        | NONE(mem/temp_out_4)          | 5     |
 mem/RAM_0_not0001(mem/RAM_0_not0001:O)         | NONE(*)(mem/RAM_0_4)          | 5     |
 mem/RAM_1_cmp_eq0000(mem/RAM_1_cmp_eq0000:O)   | NONE(*)(mem/RAM_1_4)          | 5     |
@@ -538,7 +539,7 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 6.984ns (Maximum Frequency: 143.181MHz)
+   Minimum period: 7.035ns (Maximum Frequency: 142.147MHz)
    Minimum input arrival time before clock: 2.840ns
    Maximum output required time after clock: 5.493ns
    Maximum combinational path delay: No path found
@@ -549,10 +550,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.984ns (frequency: 143.181MHz)
-  Total number of paths / destination ports: 6901 / 48
+  Clock period: 7.035ns (frequency: 142.147MHz)
+  Total number of paths / destination ports: 7801 / 50
 -------------------------------------------------------------------------
-Delay:               6.984ns (Levels of Logic = 25)
+Delay:               7.035ns (Levels of Logic = 26)
   Source:            DIV1/counter_1 (FF)
   Destination:       DIV1/counter_0 (FF)
   Source Clock:      clk rising
@@ -580,18 +581,19 @@ Delay:               6.984ns (Levels of Logic = 25)
      MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<14> (DIV1/Madd_counter_addsub0000_cy<14>)
      MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<15> (DIV1/Madd_counter_addsub0000_cy<15>)
      MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<16> (DIV1/Madd_counter_addsub0000_cy<16>)
-     XORCY:CI->O           1   0.654   0.380  DIV1/Madd_counter_addsub0000_xor<17> (DIV1/counter_addsub0000<17>)
-     LUT3:I2->O            1   0.561   0.000  DIV1/counter_cmp_eq0000_wg_lut<0> (DIV1/counter_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.523   0.000  DIV1/counter_cmp_eq0000_wg_cy<0> (DIV1/counter_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<1> (DIV1/counter_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<2> (DIV1/counter_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<3> (DIV1/counter_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  DIV1/counter_cmp_eq0000_wg_cy<4> (DIV1/counter_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O          24   0.065   1.064  DIV1/counter_cmp_eq0000_wg_cy<5> (DIV1/counter_cmp_eq0000)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<17> (DIV1/Madd_counter_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<18> (DIV1/Madd_counter_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<19> (DIV1/Madd_counter_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<20> (DIV1/Madd_counter_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<21> (DIV1/Madd_counter_addsub0000_cy<21>)
+     MUXCY:CI->O           0   0.065   0.000  DIV1/Madd_counter_addsub0000_cy<22> (DIV1/Madd_counter_addsub0000_cy<22>)
+     XORCY:CI->O           1   0.654   0.359  DIV1/Madd_counter_addsub0000_xor<23> (DIV1/counter_addsub0000<23>)
+     LUT4:I3->O            1   0.561   0.000  DIV1/counter_cmp_eq0000_wg_lut<5> (DIV1/counter_cmp_eq0000_wg_lut<5>)
+     MUXCY:S->O           25   0.523   1.071  DIV1/counter_cmp_eq0000_wg_cy<5> (DIV1/counter_cmp_eq0000)
      FDR:R                     0.435          DIV1/counter_0
     ----------------------------------------
-    Total                      6.984ns (5.052ns logic, 1.932ns route)
-                                       (72.3% logic, 27.7% route)
+    Total                      7.035ns (5.117ns logic, 1.918ns route)
+                                       (72.7% logic, 27.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'save'
@@ -609,8 +611,8 @@ Delay:               2.938ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              6   0.495   0.677  write_address_counter/c_0 (write_address_counter/c_0)
-     LUT3:I0->O            2   0.561   0.446  write_address_counter/Mcount_c311 (write_address_counter/Mcount_c3_bdd0)
-     LUT4:I1->O            1   0.562   0.000  write_address_counter/Mcount_c51 (write_address_counter/Mcount_c5)
+     LUT3:I0->O            2   0.561   0.446  write_address_counter/Mcount_c_xor<3>111 (N14)
+     LUT4:I1->O            1   0.562   0.000  write_address_counter/Mcount_c_xor<5>11 (write_address_counter/Mcount_c5)
      FDC:D                     0.197          write_address_counter/c_5
     ----------------------------------------
     Total                      2.938ns (1.815ns logic, 1.123ns route)
@@ -632,8 +634,8 @@ Delay:               2.971ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              7   0.495   0.710  read_address_counter/c_0 (read_address_counter/c_0)
-     LUT3:I0->O            2   0.561   0.446  read_address_counter/Mcount_c311 (read_address_counter/Mcount_c3_bdd0)
-     LUT4:I1->O            1   0.562   0.000  read_address_counter/Mcount_c51 (read_address_counter/Mcount_c5)
+     LUT3:I0->O            2   0.561   0.446  read_address_counter/Mcount_c_xor<3>111 (N15)
+     LUT4:I1->O            1   0.562   0.000  read_address_counter/Mcount_c_xor<5>11 (read_address_counter/Mcount_c5)
      FDC:D                     0.197          read_address_counter/c_5
     ----------------------------------------
     Total                      2.971ns (1.815ns logic, 1.156ns route)
@@ -641,10 +643,10 @@ Delay:               2.971ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DIV1/clk_div'
-  Clock period: 3.022ns (frequency: 330.940MHz)
-  Total number of paths / destination ports: 83 / 36
+  Clock period: 3.001ns (frequency: 333.256MHz)
+  Total number of paths / destination ports: 105 / 38
 -------------------------------------------------------------------------
-Delay:               3.022ns (Levels of Logic = 1)
+Delay:               3.001ns (Levels of Logic = 1)
   Source:            buzzer/shift_ctrl (FF)
   Destination:       buzzer/reg_11 (FF)
   Source Clock:      DIV1/clk_div rising
@@ -654,12 +656,12 @@ Delay:               3.022ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDSE:C->Q            20   0.495   0.960  buzzer/shift_ctrl (buzzer/shift_ctrl)
-     LUT3:I2->O           14   0.561   0.850  buzzer/reg_1_not00011 (buzzer/reg_1_not0001)
+     FDSE:C->Q            20   0.495   0.939  buzzer/shift_ctrl (buzzer/shift_ctrl)
+     LUT4:I3->O           14   0.561   0.850  buzzer/reg_1_not00011 (buzzer/reg_1_not0001)
      FDE:CE                    0.156          buzzer/reg_2
     ----------------------------------------
-    Total                      3.022ns (1.212ns logic, 1.810ns route)
-                                       (40.1% logic, 59.9% route)
+    Total                      3.001ns (1.212ns logic, 1.789ns route)
+                                       (40.4% logic, 59.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem/RAM_0_not0001'
@@ -3390,12 +3392,12 @@ Offset:              5.493ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.60 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.05 secs
  
 --> 
 
-Total memory usage is 4552892 kilobytes
+Total memory usage is 4552864 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   70 (   0 filtered)

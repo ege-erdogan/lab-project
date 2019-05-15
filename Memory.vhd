@@ -48,7 +48,7 @@ architecture Behavioral of Memory is
 
 begin
 	
-	process(read_enable, write_enable, reset, address)
+	process(read_enable, write_enable, address)
 	begin
 		if read_enable = '1' then
 			temp_out <= RAM(to_integer(unsigned(address)));
